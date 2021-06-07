@@ -2,7 +2,7 @@
 
 * expand 8x8 into cube
 * use special OUT commands to put data 3x bytes on all buses, or
-* or use all 2x 8 latch ports from LED's and SPK and port 6 plus add 1 extra latch 
+* or use all 2x 8 latch ports from LED's and SPK plus add 1 extra 8 port latch 
 * code in asm and forth 
 
 ## Iterate
