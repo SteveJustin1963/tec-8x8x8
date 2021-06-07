@@ -1,9 +1,8 @@
 # tec-8x8x8
 
 * expand 8x8 into cube
-* use special OUT commands to put data 3x bytes on all buses, 
-* or expand current 6x led ports by 2 and one latch on address lines
-
+* use special OUT commands to put data 3x bytes on all buses, or
+* or use all 2x 8 latch ports from LED's and SPK and port 6 plus add 1 extra latch 
 * code in asm and forth 
 
 ## Iterate
