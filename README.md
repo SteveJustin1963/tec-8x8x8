@@ -2,8 +2,7 @@
 
 * expand 8x8 into cube
 * use special OUT commands to put data 3x bytes on all buses, 
-OR
-* expand current 6x led ports by 2 and one latch on address lines
+* or expand current 6x led ports by 2 and one latch on address lines
 
 * code in asm and forth 
 
