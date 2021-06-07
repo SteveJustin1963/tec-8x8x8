@@ -4,7 +4,8 @@
 * or use special OUT commands to put data of 3x bytes on data and address buses, address bus will act as data output
 * code in asm and forth 
 
-## Iterate
-* put photoresistor in matrix to interact with led out out, induce feedback loops
+# Iterate
+* read photoresistor via schmitt or ADC and input to mixing table to interact with LED output, 
+* induce feedback loops and effects
 * superposition code behaviour thru mixing matrix
 * 
