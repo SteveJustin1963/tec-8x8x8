@@ -20,7 +20,7 @@ https://easyeda.com/editor#id=e46b6deb1e7e4ed88163b204ffa0233f|a7698e020e1d46d7b
 
 ![](https://github.com/SteveJustin1963/tec-8x8x8/blob/master/pics/sch-3.jpg)
 
-![](https:// )
+![](https://github.com/SteveJustin1963/tec-8x8x8/blob/master/pics/pcb-3.jpg )
 
 ### circuit using 574 latches
 
@@ -28,6 +28,6 @@ https://easyeda.com/editor#id=e46b6deb1e7e4ed88163b204ffa0233f|584f4ef8dc4f4d8a8
 
 ![](https://github.com/SteveJustin1963/tec-8x8x8/blob/master/pics/888-4.png)
 
-![]()
+![](https://github.com/SteveJustin1963/tec-8x8x8/blob/master/pics/sch-4.jpg)
 
-![]()
+![](https://github.com/SteveJustin1963/tec-8x8x8/blob/master/pics/pcb-4.jpg)
