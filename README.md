@@ -10,6 +10,8 @@ use the existing all 2x 8 latch ports from LED's and SPK plus plus add 1 extra 8
 * or use special OUT commands to put data of 3x bytes on data and address buses, address bus will act as data output
 * code in asm and forth 
 
-### cct
-https://easyeda.com/editor#id=ed061e9ae9224c60852fb2f375365b3b|acb8d600422a4e25b69171aa71cef963
+
+
+### circuit using 273 latches
+https://easyeda.com/editor#id=a7698e020e1d46d7ba73e56e72c2b4c2|e46b6deb1e7e4ed88163b204ffa0233f
 
