@@ -17,7 +17,7 @@ use the existing all 2x 8 latch ports from LED's and SPK plus plus add 1 extra 8
 https://easyeda.com/editor#id=e46b6deb1e7e4ed88163b204ffa0233f|a7698e020e1d46d7ba73e56e72c2b4c2|d16a76b684a24d72a65f856c23ff9f3b
 
 ![](https://github.com/SteveJustin1963/tec-8x8x8/blob/master/pics/888-3.png)
-
+![]()
  
 
 ### circuit using 574 latches
