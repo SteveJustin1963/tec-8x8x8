@@ -1,6 +1,20 @@
 ## tec-8x8x8
 
-there is a special out() op code that allows writing data to both the data and address bus!
+We have the 8x8, and on much the same design we can go 8x8x8 by adding more latches and another 138 chip. We can also blast all data to the cube using the undocumented out (c) command
+
+`out (c),a
+`out (a0-a7 b),a  ; so ‘a’ goes to a0-7 and ‘a’ goes to a8-15 
+
+The one we want is
+`out (c), reg
+
+We preload bc, and a then hit out, then it dumps on all three registers at same time; hence
+
+`ld a,n
+`out (c),bc [reg pair]
+`out (a0-7),a  ; a >a0-7 + bc>a0-15 
+
+out() op code that allows writing data to both the data and address bus!
 so you have 3 registers to make io with in one go.
 
 let use this feature to drive a 8x8x8 cube of leds
@@ -31,3 +45,5 @@ https://easyeda.com/editor#id=e46b6deb1e7e4ed88163b204ffa0233f|584f4ef8dc4f4d8a8
 ![](https://github.com/SteveJustin1963/tec-8x8x8/blob/master/pics/888-4.png)
 
  unfinished
+
+
