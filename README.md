@@ -9,7 +9,7 @@ this hack-on is to use the kit and drive it rather with the tec-1.
 
 an example of the kitfor sale online https://www.banggood.com/Geekcreit-8x8x8-LED-Cube-3D-Light-Square-Blue-LED-Flash-Electronic-DIY-Kit-p-1055438.html
 
-id like to exploit the undocumented out(c) command to drive the lates with. 
+id like to exploit the undocumented out(c) command to drive the latches with. 
 it goes like this;
 
 ```
