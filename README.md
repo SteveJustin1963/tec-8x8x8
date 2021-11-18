@@ -1,6 +1,15 @@
 ## tec-8x8x8
 
-We have the 8x8, and on much the same design we can go 8x8x8 by adding more latches and another 138 chip. We can also blast all data to the cube using the undocumented out (c) command
+its nice we have the 8x8 addon, and on much the same design we can make a 8x8x8 by adding more latches + 138 chip. 
+you can also buy a 8x8x8 kit for under $30 with all the parts, but you cant connect it to the tec-1, or can you? lol
+
+this hack add-on is to use the kit
+
+https://www.banggood.com/Geekcreit-8x8x8-LED-Cube-3D-Light-Square-Blue-LED-Flash-Electronic-DIY-Kit-p-1055438.html?
+
+then blast the data to the port using the undocumented out (c) command. but how can it be undocumented when theres a document for this undocumneted opcode?
+
+it goes like this;
 
 ```
 out (c),a
@@ -52,8 +61,6 @@ https://easyeda.com/editor#id=e46b6deb1e7e4ed88163b204ffa0233f|584f4ef8dc4f4d8a8
 
  unfinished
 
-## Ref
-kit
-https://www.banggood.com/Geekcreit-8x8x8-LED-Cube-3D-Light-Square-Blue-LED-Flash-Electronic-DIY-Kit-p-1055438.html?utm_source=google&utm_medium=cpc_ods&utm_content=2ysq&utm_campaign=2ysq-all-Sds-Feed-0726&ad_id=535762987585&gclid=CjwKCAiA7dKMBhBCEiwAO_crFER4mDiaziBiiCnnRuP5qEFwkr5mdtMtPl1ukUHsAz27irctyFSUdBoC1qEQAvD_BwE&cur_warehouse=CN
+ 
 
 
