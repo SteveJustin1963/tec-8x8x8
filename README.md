@@ -7,6 +7,7 @@ this hack add-on is to use the kit
 
 https://www.banggood.com/Geekcreit-8x8x8-LED-Cube-3D-Light-Square-Blue-LED-Flash-Electronic-DIY-Kit-p-1055438.html
 
+with the right address decode to activate the latches we 
 then blast the data to the port using the undocumented out (c) command. but how can it be undocumented when theres a document for this undocumneted opcode?
 
 it goes like this;
