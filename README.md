@@ -29,7 +29,14 @@ out (a0-7),a  ; a >a0-7 + bc>a0-15
 ```
 
 using the out() opcode allows writing to the data and address bus at the same time! we then intersect the data/address lines with the
-pcb kit to 
+pcb kit, 
+
+see the circuit of the kit
+https://github.com/SteveJustin1963/tec-8x8x8/blob/master/pics/8x8x8-LED-Cube-Image-Circuit-Diagram-Full-Size.png
+
+our cicuit to connect to the kit
+
+
 
 
  unfinished
