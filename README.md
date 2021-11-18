@@ -52,4 +52,8 @@ https://easyeda.com/editor#id=e46b6deb1e7e4ed88163b204ffa0233f|584f4ef8dc4f4d8a8
 
  unfinished
 
+## Ref
+kit
+https://www.banggood.com/Geekcreit-8x8x8-LED-Cube-3D-Light-Square-Blue-LED-Flash-Electronic-DIY-Kit-p-1055438.html?utm_source=google&utm_medium=cpc_ods&utm_content=2ysq&utm_campaign=2ysq-all-Sds-Feed-0726&ad_id=535762987585&gclid=CjwKCAiA7dKMBhBCEiwAO_crFER4mDiaziBiiCnnRuP5qEFwkr5mdtMtPl1ukUHsAz27irctyFSUdBoC1qEQAvD_BwE&cur_warehouse=CN
+
 
