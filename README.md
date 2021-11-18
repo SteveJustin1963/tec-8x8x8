@@ -39,7 +39,42 @@ our cicuit to connect to the kit
 
 
 
- unfinished
+## Kit info
+
+
+Note:
+
+Instruction: Click to open (Instruction is for reference only, will have some changes with the actual product, such as change SMD to DIP.)
+Note: This is a DIY kit, you need to have some knowledge of electronics and ability.
+Needs a lot of soldering, you should have enough patience.
+S2, S3 is the reserved position, there is no actual use, the package is not included.
+
+Features:
+
+You can use it to achieve the Dynamic 3D effect:
+1. Pyramid
+2. Rain graphic effect
+3. Leaping graphics effect
+4. Rotating graphic effect
+5. Square move effect
+6. Square light move effect
+7. Lamp standard rollover effect
+8. Square magnify and shrink effect
+9. Reverse lamp
+10. Triangle three-dimensional graphics rotation effect
+11. Article lamp running effect
+12. Pull screen graphics effect
+13. Fast and slow display
+
+Specification:
+
+Light Color: Blue
+PCB Size: 11.1 x 12.7cm
+Power Supply Voltage: 4.5~5.5V
+Net weight: About 240g
+
+Package list:
+
 
  
 
