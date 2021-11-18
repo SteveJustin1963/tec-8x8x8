@@ -74,7 +74,7 @@ Power Supply Voltage: 4.5~5.5V
 Net weight: About 240g
 
 Package list:
-
+![](https://github.com/SteveJustin1963/tec-8x8x8/blob/master/pics/C89439F9BE3E6986B18FDAB69E885086.jpg.webp)
 
  
 
