@@ -39,7 +39,13 @@ experimental cicuit to connect to the kit
 
 ![](https://github.com/SteveJustin1963/tec-8x8x8/blob/master/pics/wiring-1.png)
 
-easyeda
+https://easyeda.com/editor#id=2566f0087f05462c8c1e0b6c8555f6c8|e49368fb5fbd4fbda2a12e08e32c8036
+
+
+
+# Warning
+not tested nor do i have code yet
+i have the 8x8x8 kit so building that first
 
 ## Kit info
 
