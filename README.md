@@ -35,7 +35,7 @@ solong as the chips get selected the data/address lines with will dump to the ki
 see the circuit of the kit
 https://github.com/SteveJustin1963/tec-8x8x8/blob/master/pics/8x8x8-LED-Cube-Image-Circuit-Diagram-Full-Size.png
 
-experimental cicuit to connect to the kit
+experimental cicuit to connect the tec1- to 8x8x8 kit
 
 ![](https://github.com/SteveJustin1963/tec-8x8x8/blob/master/pics/wiring-1.png)
 
