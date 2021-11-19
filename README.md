@@ -37,7 +37,9 @@ https://github.com/SteveJustin1963/tec-8x8x8/blob/master/pics/8x8x8-LED-Cube-Ima
 
 our cicuit to connect to the kit
 
->>insert
+![](https://github.com/SteveJustin1963/tec-8x8x8/blob/master/pics/wiring-1.png)
+
+easyeda
 
 ## Kit info
 
