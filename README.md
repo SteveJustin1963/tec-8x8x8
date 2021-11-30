@@ -43,7 +43,7 @@ experimental cicuit to connect the tec1- to 8x8x8 kit
 
 https://easyeda.com/editor#id=2566f0087f05462c8c1e0b6c8555f6c8|e49368fb5fbd4fbda2a12e08e32c8036
 
-
+![](https://github.com/SteveJustin1963/tec-8x8x8/blob/master/pics/pcb.png)
 
 # Warning
 not tested nor do i have code yet
