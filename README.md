@@ -3,7 +3,7 @@
 ![](https://github.com/SteveJustin1963/tec-8x8x8/blob/master/pics/64-to-512.png)
 
 its nice we have the 8x8 addon, and on much the same design we can make a 8x8x8 by adding more latches + 138 chip. 
-you can also buy a 8x8x8 kit for under $30 with all the parts, but you cant connect it to the tec-1, or can you? lol
+you can also buy a 8x8x8 kit for under $30 with all the parts, butlets try and drive it from the tec-1.
 
 this hack-on is to use the kit and drive it rather with the tec-1. 
 
