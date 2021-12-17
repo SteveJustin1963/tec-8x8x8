@@ -7,27 +7,21 @@ you can also buy a 8x8x8 kit for under $30 with all the parts, lets try and driv
 
 Examples of the kits for sale online see https://www.banggood.com/Geekcreit-8x8x8-LED-Cube-3D-Light-Square-Blue-LED-Flash-Electronic-DIY-Kit-p-1055438.html
 
-Id like to try the undocumented out(c) command feature of the z80 to drive the three latch sides, like this
+Id like to try the undocumented out(c) command feature of the z80 to drive the 3 dimensions of the cube, or anthing like this eg x + y + luminance etc.
+
+So using out() opcode like this allows writing to the BOTH data and address at the same time! 
+The latches need to be anabled at right time to pickup the data, then we transfer this to the 8x8x8 kit. 
 
 ```
-out (c),a
-out (a0-a7 b),a  ; so ‘a’ goes to a0-7 and ‘a’ goes to a8-15
-
-The one we want is
-
-out (c), reg
+out(c),reg
 ```
 
-We preload bc, and a then hit out, then it dumps on all three registers at same time; hence
-
+We load a then bc, then execute out(c), it will output 24 bits, 8 on data and 16 on address at the same time, code looks like this;
 ```
-ld a,n
-out (c),bc [reg pair]
-out (a0-7),a  ; a >a0-7 + bc>a0-15 
+ld a,n        ; load a
+out (c),bc    ; load bc and execute, now a+bc goes out, for latch to pickup if enabled
 ```
 
-So using the out() opcode like this allows writing to the BOTH data and address bus at the same time with the data we want! 
-solong as the chips get selected the data/address lines with will dump to the kits latches. 
 
 See the circuit of the kit
 
