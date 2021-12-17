@@ -49,9 +49,9 @@ https://easyeda.com/editor#id=2566f0087f05462c8c1e0b6c8555f6c8|e49368fb5fbd4fbda
 not tested nor do i have code yet
 i have the 8x8x8 kit so building that first
 
-## Kit info
+## 8x8x8 Kit info
 
-Note:
+Notes from the kit website...
 
 Instruction: Click to open (Instruction is for reference only, will have some changes with the actual product, such as change SMD to DIP.)
 Note: This is a DIY kit, you need to have some knowledge of electronics and ability.
