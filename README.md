@@ -7,7 +7,8 @@ you can also buy a 8x8x8 kit for under $30 with all the parts. Lets try and driv
 
 Examples of the kits for sale online see https://www.banggood.com/Geekcreit-8x8x8-LED-Cube-3D-Light-Square-Blue-LED-Flash-Electronic-DIY-Kit-p-1055438.html
 
-Id like to try the undocumented out(c) command feature of the z80 to drive the 3 dimensions of the cube, or anthing like this eg x + y + luminance etc.
+Id like to try the undocumented out(c) command feature of the z80 to drive the 3 dimensions of the cube, or anthing like this eg x + y + z.
+In other projects this could be xy coils and luminance in a crt tube, or xy coil + laser, or xyz robot arm, ...
 
 So using out() opcode like this allows writing to the BOTH data and address at the same time! 
 The latches need to be anabled at right time to pickup the data, then we transfer this to the 8x8x8 kit. 
