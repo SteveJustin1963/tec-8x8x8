@@ -3,7 +3,7 @@
 ![](https://github.com/SteveJustin1963/tec-8x8x8/blob/master/pics/64-to-512.png)
 
 Its nice we have the 8x8 addon, and on much the same design we can make a 8x8x8 by adding more latches + 138 chip. 
-you can also buy a 8x8x8 kit for under $30 with all the parts, lets try and drive it from the tec-1.
+you can also buy a 8x8x8 kit for under $30 with all the parts. Lets try and drive it from the tec-1.
 
 Examples of the kits for sale online see https://www.banggood.com/Geekcreit-8x8x8-LED-Cube-3D-Light-Square-Blue-LED-Flash-Electronic-DIY-Kit-p-1055438.html
 
