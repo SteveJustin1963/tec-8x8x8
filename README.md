@@ -2,15 +2,12 @@
 
 ![](https://github.com/SteveJustin1963/tec-8x8x8/blob/master/pics/64-to-512.png)
 
-its nice we have the 8x8 addon, and on much the same design we can make a 8x8x8 by adding more latches + 138 chip. 
+Its nice we have the 8x8 addon, and on much the same design we can make a 8x8x8 by adding more latches + 138 chip. 
 you can also buy a 8x8x8 kit for under $30 with all the parts, lets try and drive it from the tec-1.
 
-this hack-on is to use the kit and drive it rather with the tec-1. 
+Examples of the kits for sale online see https://www.banggood.com/Geekcreit-8x8x8-LED-Cube-3D-Light-Square-Blue-LED-Flash-Electronic-DIY-Kit-p-1055438.html
 
-an example of the kitfor sale online https://www.banggood.com/Geekcreit-8x8x8-LED-Cube-3D-Light-Square-Blue-LED-Flash-Electronic-DIY-Kit-p-1055438.html
-
-id like to exploit the undocumented out(c) command to drive the latches with. 
-it goes like this;
+Id like to try the undocumented out(c) command feature of the z80 to drive the three latch sides, like this
 
 ```
 out (c),a
@@ -29,13 +26,14 @@ out (c),bc [reg pair]
 out (a0-7),a  ; a >a0-7 + bc>a0-15 
 ```
 
-so using the out() opcode like this allows writing to the BOTH data and address bus at the same time with the data we want! 
+So using the out() opcode like this allows writing to the BOTH data and address bus at the same time with the data we want! 
 solong as the chips get selected the data/address lines with will dump to the kits latches. 
 
-see the circuit of the kit
+See the circuit of the kit
+
 https://github.com/SteveJustin1963/tec-8x8x8/blob/master/pics/8x8x8-LED-Cube-Image-Circuit-Diagram-Full-Size.png
 
-experimental cicuit to connect the tec1- to 8x8x8 kit
+Experimental cicuit to connect the tec1- to 8x8x8 kit
 
 ![](https://github.com/SteveJustin1963/tec-8x8x8/blob/master/pics/wiring-1.png)
 
