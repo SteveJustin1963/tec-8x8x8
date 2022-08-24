@@ -5,8 +5,10 @@
 #define uint unsigned int
 
 uchar display[8][8];
+// This is an array that stores data for a 8x8 LED display.
 
-/*rank:A,1,2,3,4,I,ĞÄ,U*/
+
+/*rank:A,1,2,3,4,I,å¿ƒ,U*/
 
 uchar code table_cha[8][8]={0x51,0x51,0x51,0x4a,0x4a,0x4a,0x44,0x44,0x18,0x1c,0x18,0x18,0x18,0x18,0x18,0x3c,0x3c,0x66,0x66,0x30,0x18,0xc,0x6,0xf6,0x3c,0x66,0x60,0x38,0x60,0x60,0x66,0x3c,0x30,0x38,0x3c,0x3e,0x36,0x7e,0x30,0x30,0x3c,0x3c,0x18,0x18,0x18,0x18,0x3c,0x3c,0x66,0xff,0xff,0xff,0x7e,0x3c,0x18,0x18,0x66,0x66,0x66,0x66,0x66,0x66,0x7e,0x3c};
 
@@ -54,7 +56,14 @@ void sinter()
 
 }
 
-void delay5us(void)   //Îó²î -0.026765046296us STC 1T 22.1184Mhz
+
+//;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+// The delay5us() function delays for approximately 5 microseconds. 
+// This function is called by delay(), which takes a parameter specifying the number of milliseconds to delay. 
+// delay() calls delay5us() the appropriate number of times to produce the specified delay.
+
+
+void delay5us(void)   //è¯¯å·® -0.026765046296us STC 1T 22.1184Mhz
 {
     unsigned char a,b;
     for(b=7;b>0;b--)
@@ -66,8 +75,20 @@ void delay(uint i)
 {                                                                                                     
 
          while (i--){
-		 delay5us();}//12tµÄmcu ×¢ÊÍÕâ¸öÑÓÊ±¼´¿É
+		 delay5us();}//12tçš„mcu æ³¨é‡Šè¿™ä¸ªå»¶æ—¶å³å¯
 }
+//;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+
+
+
+//;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+// The code is checking if a certain bit in a number is 1 or 0. 
+// The num variable is the number being checked, and the b variable is the bit position being checked. 
+// The code uses a bitwise AND operation to check if the bit is 1 or not. 
+// If the result is not 0, then the bit is 1. Otherwise, the bit is 0.
+
 
 /*To judge the num bit*/
 
@@ -90,6 +111,10 @@ uchar judgebit(uchar num,uchar b)
          return n;
 
 }
+
+//;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
 
 /*To figure out the round number*/
 
