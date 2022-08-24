@@ -1,16 +1,20 @@
 #include <REG52.H>
- #include <intrins.h>
+#include <intrins.h>
 #define uchar unsigned char
-
 #define uint unsigned int
 
-uchar display[8][8];
+
+//;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 // This is an array that stores data for a 8x8 LED display.
 
+uchar display[8][8];
 
 /*rank:A,1,2,3,4,I,心,U*/
-
+//This line of code defines a variable called table_cha as an unsigned character.
 uchar code table_cha[8][8]={0x51,0x51,0x51,0x4a,0x4a,0x4a,0x44,0x44,0x18,0x1c,0x18,0x18,0x18,0x18,0x18,0x3c,0x3c,0x66,0x66,0x30,0x18,0xc,0x6,0xf6,0x3c,0x66,0x60,0x38,0x60,0x60,0x66,0x3c,0x30,0x38,0x3c,0x3e,0x36,0x7e,0x30,0x30,0x3c,0x3c,0x18,0x18,0x18,0x18,0x3c,0x3c,0x66,0xff,0xff,0xff,0x7e,0x3c,0x18,0x18,0x66,0x66,0x66,0x66,0x66,0x66,0x7e,0x3c};
+
+
+
 
 /*the "ideasoft"*/
 
@@ -32,13 +36,10 @@ uchar code dat3[24]={0x00,0x01,0x02,0x03,0x04,0x05,0x06,0x16,0x26,0x36,0x46,0x56
 
 uchar code table_3p[3][8]={0xff,0x89,0xf5,0x93,0x93,0xf5,0x89,0xff,0x0e,0x1f,0x3f,0x7e,0x7e,0x3f,0x1f,0x0e,0x18,0x3c,0x7e,0xff,0x18,0x18,0x18,0x18};
 
-/*initializtion
-
-That is to initialize the program .
-
-It is write to set the timer in c52 mcu.
-
-So the program can renovate the led_3d_cube in fixed time use the interrupt function.*/
+//initializtion
+// That is to initialize the program .
+// It is write to set the timer in c52 mcu.
+// So the program can renovate the led_3d_cube in fixed time use the interrupt function.
 
 void sinter()
 
@@ -113,7 +114,11 @@ uchar judgebit(uchar num,uchar b)
 }
 
 //;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
+//This code is finding the absolute value of 'a'. 
+//'a' is divided by 10 and the quotient is assigned to 'b'. 
+//The remainder of 'a' divided by 10 is assigned back to 'a'. 
+//If 'a' is greater than or equal to 5, 'b' is incremented by 1. 
+//The final value of 'b' is returned.
 
 
 /*To figure out the round number*/
@@ -136,6 +141,11 @@ uchar abs(uchar a)
 
 }
 
+
+;///////////////////////////////////////////////////////
+// This code line defines a function that calculates the absolute value of a number. 
+// If the number is negative, the function makes it positive before returning it.
+	
 /*To figure out the absolute value*/
 
 uchar abss(char a)
@@ -150,6 +160,10 @@ uchar abss(char a)
 
 }
 
+
+
+;//////////////////////////////////////////////////////
+// This code is a function that swaps the values of two variables if the first variable is greater than the second variable.
 /*The function can comparat the character.
 
 And remove the big one to the back.*/
@@ -174,7 +188,10 @@ void max(uchar *a,uchar *b)
 
 }
 
+////////////////////////////////////////////////////////////////////
+
 /*The function is to figure out the max number and return it.*/
+//This is a function that returns the maximum of three values.
 
 uchar maxt(uchar a,uchar b,uchar c)
 
@@ -191,6 +208,14 @@ uchar maxt(uchar a,uchar b,uchar c)
          return a;
 
 }
+
+
+// This code is creating a function called clear that takes in a character input called le. 
+//The function then sets up two variables, i and j, that will be used as counters. 
+//There is then a nested for loop that will run 8 times. 
+//The first for loop will run through each row of the display array 
+//and the second for loop will run through each column of the display array. 
+//The nested for loop will set each element of the display array equal to the input character le.
 
 void clear(char le)
 
@@ -209,6 +234,20 @@ void clear(char le)
          }
 
 }
+
+
+
+
+// This is a function that creates a trailing effect. 
+//The outer for loop iterates from 6 to -3. 
+//The first if statement within the for loop says that if i is greater than or equal to 0, 
+//then the program will execute the next for loop. 
+//This for loop iterates through the columns of the display array 
+//and sets the value of each element in the column to the element in the column to the right of it. 
+//The second if statement within the for loop says that if i is less than 4, 
+//then the program will execute the next for loop. 
+//This for loop iterates through the columns of the display array and sets the value of each element in the column to 0. 
+//This trailing effect is achieved by iterating through the columns of the array and shifting the values to the right by one each time.
 
 void trailler(uint speed)
 
