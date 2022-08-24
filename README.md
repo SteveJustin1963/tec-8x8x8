@@ -83,6 +83,7 @@ Package list:
  ## Ref
 
 - https://www.instructables.com/Led-Cube-8x8x8/
+- https://www.keil.com/dd/docs/c51/reg52.h
 - https://www.keil.com/support/man/docs/c51/c51_intrins_h.htm
 
 
