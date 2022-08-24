@@ -80,5 +80,19 @@ Package list:
 ![](https://github.com/SteveJustin1963/tec-8x8x8/blob/master/pics/C89439F9BE3E6986B18FDAB69E885086.jpg.webp)
 
  
+ ## Ref
+
+- https://www.instructables.com/Led-Cube-8x8x8/
+- https://www.keil.com/support/man/docs/c51/c51_intrins_h.htm
+
+
+## Iterate
+
+make more led effects
+- read photoresistor via schmitt or ADC and input into the mixing table, use hand to control light 
+- induce feedback loops, chaos cct etc
+- superposition code behaviour thru mixing matrix
+- 3d tetris
+- use 5 https://github.com/SteveJustin1963/tec-EYE set into a cube, then feed this into the outer 5 layers of the 8x8x8 cube, etc
 
 
