@@ -1,5 +1,5 @@
 // 26.8.2022... I have added lots of comments that were lacking, still needs lots of work...
-
+// this program supplied by kit manufacturer
 
 
 #include <REG52.H>
