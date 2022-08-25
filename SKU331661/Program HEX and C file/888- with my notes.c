@@ -4,7 +4,7 @@
 #define uint unsigned int
 
 
-//;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 // This is an array that stores data for a 8x8 LED display.
 
 uchar display[8][8];
@@ -742,7 +742,17 @@ void boxtola(char i,uchar n)
 
 }
 
-// xxx
+// The rolldisplay() function displays a scrolling message on the screen, with each character in the message appearing in turn. 
+//The speed parameter determines how fast the message scrolls.
+//The function first sets up a loop that will run for a total of 40 characters. 
+//Within this loop, another loop is used to display each character in the message in turn.
+//The first loop runs from 23 to -40, decrementing by 1 each time. 
+//The second loop runs from 0 to 40, incrementing by 1 each time.
+//For each iteration of the first loop, the second loop will display the character at the corresponding position in the message. 
+//For example, on the first iteration of the first loop, 
+//    the second loop will display characters 0-39 from the message. 
+//    On the second iteration, it will display characters 1-40, and so on.
+//Once all the characters have been displayed, the function delays for a time determined by the speed parameter, before starting again from the beginning.
 
 void rolldisplay(uint speed)
 
@@ -773,6 +783,17 @@ void rolldisplay(uint speed)
          }
 
 }
+
+
+
+///////////////////
+//This is a function that creates an animation of a dot rolling around the edge of a cube. 
+// The function takes in two parameters, n and speed. N determines which face of the cube the dot starts on, and speed determines how fast the dot should move. 
+//The function uses a switch statement to determine which face of the cube to start on. 
+//Then, there is a for loop that goes from i=0 to i<7. 
+//Inside the for loop, the display array is updated to create the animation of the dot rolling around the edge of the cube. 
+//Finally, the delay function is used to control the speed of the animation.
+
 
 void roll_apeak_yz(uchar n,uint speed)
 
@@ -850,6 +871,25 @@ void roll_apeak_yz(uchar n,uint speed)
 
 }
 
+
+//////////////
+//This is a function that will roll an "apeak" across the LED matrix
+//n is the number of the apeak (there are four apeaks, numbered 0-3)
+//speed is the speed at which the apeak will roll
+//The function starts by creating a loop that will run 7 times
+//Inside the loop, the first LED in the apeak's column is turned on, and the last LED in the previous apeak's column is turned off
+//Then, the loop delays for the speed that was inputted before repeating
+//After the loop has finished running, the function will end
+//
+//This is a function that rolls a peak around the xy axis. 
+//n is the starting point, with 0 being the top left, 
+//1 being the top right, 2 being the bottom right, and 3 being the bottom left. 
+//speed is the delay between each step. 
+//The function works by first drawing a line in the direction it is supposed to go, 
+//then drawing a line at the end of the peak, then delaying for however long is specified. 
+//It repeats this process 7 times.
+
+
 void roll_apeak_xy(uchar n,uint speed)
 
 {
@@ -925,6 +965,34 @@ void roll_apeak_xy(uchar n,uint speed)
          }
 
 }
+
+
+////////////////
+//This code is a function that creates an animation of a box rolling across the screen. 
+//The function takes in two parameters, n and speed. 
+//n corresponds to which direction the box will roll. 
+//A value of 
+//1 indicates the box will roll from left to right, 
+//2 indicates the box will roll from top to bottom, 
+//3 indicates the box will roll from right to left, 
+//and 0 indicates the box will roll from bottom to top. 
+//The speed parameter determines how fast the box will roll across the screen. 
+//Inside the function, there is a for loop that iterates 8 times. 
+//On each iteration of the loop, the box is moved one pixel in the direction specified by the n parameter. 
+//The box is then redrawn in its new position. A delay is inserted between each iteration of the loop to control the speed of the animation.
+//
+//This function is used to roll a 3D box on a given xy plane. 
+//The function takes in two parameters - 
+//n - which is the plane on which the box has to be rolled (can be 1, 2, 3 or 0)
+//speed - which is the speed at which the box has to be rolled
+//Depending on the value of the 'n' parameter, the box is rolled on a different plane. 
+//For example, if 'n' is 1, the box is rolled on the xy plane with the z axis pointing downwards. 
+//Similarly, if 'n' is 2, the box is rolled on the xy plane with the z axis pointing to the left. 
+//If 'n' is 3, the box is rolled on the xy plane with the z axis pointing upwards and if 'n' is 0, 
+//the box is rolled on the xy plane with the z axis pointing to the right. 
+//The box is rolled by first drawing it at a particular position and then clearing that position and drawing it at the next position. 
+//This is repeated until the box has been rolled to the desired position.
+
 
 void roll_3_xy(uchar n,uint speed)
 
@@ -1009,6 +1077,9 @@ void roll_3_xy(uchar n,uint speed)
          }
 
 }
+/////////////////////////
+// xxx
+
 
 void trans(uchar z,uint speed)
 
