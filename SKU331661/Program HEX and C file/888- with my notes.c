@@ -1810,696 +1810,556 @@ void flash_7()
       }
 }
 
-xxx
+
 ////////////////////////////////////////////////////////////
+//The function flash_8() will output the characters 5, 6, and 7 to the screen, 
+//each character separated by a delay of 60,000 milliseconds.
+
+
 void flash_8()
-
 {
-
       uchar i;
-
       for (i=5;i<8;i++)
-
       {
-
                tranoutchar(i,10000);
-
                delay(60000);
-
                delay(60000);
-
       }
-
 }
+
+
+
+///////////////////////////////////////////////////////////
+//This function displays a series of animations on the LED matrix. 
+//First, a series of boxes are displayed on the matrix, each box appearing in a different location. 
+//Then, the boxes roll across the matrix. Next, a series of lines are drawn on the matrix. 
+//Finally, a series of boxes are displayed, filling up the matrix. and then disappearing. how it works in detail:
+//The function starts by displaying a series of boxes on the matrix. 
+//For each box, the function first calculates the x and y coordinates of the top left and bottom right corners of the box. 
+//It then calls the box_apeak_xy() function to draw the box. 
+//The box_apeak_xy() function takes four arguments: 
+//the x and y coordinates of the top left corner of the box, 
+//the x and y coordinates of the bottom right corner of the box, 
+//and a boolean value indicating whether the box should be filled in or not.
+//After all the boxes have been drawn, the function calls the roll_apeak_xy() function to roll the boxes across the matrix. 
+//The roll_apeak_xy() function takes two arguments: the number of pixels to roll the boxes, and the delay in between each pixel.
+//Next, the function draws a series of lines on the matrix. 
+//For each line, the function first calculates the x and y coordinates of the start and end points of the line. 
+//It then calls the line() function to draw the line. 
+//The line() function takes four arguments: 
+//the x and y coordinates of the start point of the line, 
+//the x and y coordinates of the end point of the line, 
+//and a boolean value indicating whether the line should be filled in or not.
+//Finally, the function displays a series of boxes on the matrix, 
+//filling up the entire matrix. 
+//For each box, the function again calculates the x and y coordinates of the top left and bottom right corners of the box. 
+//It then calls the box_apeak_xy() function to draw the box. 
+//This time, however, the function also passes a third argument to the box_apeak_xy() function: the delay in between each pixel.
+//After all the boxes have been drawn, the function calls the delay() function to pause for a moment before starting the next animation.
 
 void flash_9()
-
 {
-
       char i;
-
       uchar j,an[8],x,y,t,x1,y1;
-
       for (i=0;i<8;i++)
-
       {
-
                box_apeak_xy (i,0,0,i,7,7,1,1);
-
                if (i)
-
                box_apeak_xy (i-1,0,0,i-1,7,7,1,0);
-
                delay(10000);
-
       }
-
       roll_apeak_xy(3,10000);
-
       roll_apeak_xy(0,10000);
-
       roll_apeak_xy(1,10000);
-
       for (i=0;i<7;i++)
-
       {
-
                line(6-i,6-i,0,6-i,6-i,7,1);
-
                line(i,7,0,i,7,7,0);
-
                delay(10000);
-
       }
-
       for (i=0;i<8;i++)
-
                an[i]=14;
-
       for (i=0;i<85;i++)
-
       {
-
                clear(0);
-
                for (j=0;j<8;j++)
-
                {
-
                          t=an[j]%28;
-
                          x=dat2[t]>>5;
-
                          y=(dat2[t]>>2)&0x07;
-
                          t=(an[j]-14)%28;
-
                          x1=dat2[t]>>5;
-
                          y1=(dat2[t]>>2)&0x07;
-
                          line(x,y,j,x1,y1,j,1);
-
                }
-
                for (j=0;j<8;j++)
-
                {
-
                if ((i>j)&(j>i-71))
-
                an[j]++;
-
                } 
-
                delay(5000);
-
       }
-
       for (i=0;i<85;i++)
-
       {
-
                clear(0);
-
                for (j=0;j<8;j++)
-
                {
-
                          t=an[j]%28;
-
                          x=dat2[t]>>5;
-
                          y=(dat2[t]>>2)&0x07;
-
                          t=(an[j]-14)%28;
-
                          x1=dat2[t]>>5;
-
                          y1=(dat2[t]>>2)&0x07;
-
                          line(x,y,j,x1,y1,j,1);
-
                }
-
                for (j=0;j<8;j++)
-
                {
-
                if ((i>j)&(j>i-71))
-
                an[j]--;
-
                } 
-
                delay(5000);
-
       }
-
       for (i=0;i<29;i++)
-
       {
-
                clear(0);
-
-
-
                t=an[0]%28;
-
                x=dat2[t]>>5;
-
                y=(dat2[t]>>2)&0x07;
-
                t=(an[0]-14)%28;
-
                x1=dat2[t]>>5;
-
                y1=(dat2[t]>>2)&0x07;
-
                box_apeak_xy(x,y,0,x1,y1,7,0,1);
-
                box_apeak_xy(x,y,1,x1,y1,6,0,1);
-
                an[0]++; 
-
                delay(5000);
-
       }
-
       for (i=0;i<16;i++)
-
       {
-
                clear(0);
-
-
-
                t=an[0]%28;
-
                x=dat2[t]>>5;
-
                y=(dat2[t]>>2)&0x07;
-
                t=(an[0]-14)%28;
-
                x1=dat2[t]>>5;
-
                y1=(dat2[t]>>2)&0x07;
-
                box_apeak_xy(x,y,0,x1,y1,7,1,1);
-
                an[0]--; 
-
                delay(5000);
-
       }
-
       for (i=0;i<8;i++)
-
       {
-
                line(i,i,0,0,0,i,0);
-
                delay(5000);
-
       }
-
       for (i=1;i<7;i++)
-
       {
-
                line(i,i,7,7,7,i,0);
-
                delay(5000);
-
       }
-
       for (i=1;i<8;i++)
-
       {
-
                clear(0);
-
                box(7,7,7,7-i,7-i,7-i,0,1);
-
                delay(10000);
-
       }
-
       for (i=1;i<7;i++)
-
       {
-
                clear(0);
-
                box(0,0,0,7-i,7-i,7-i,0,1);
-
                delay(10000);
-
       }
-
       for (i=1;i<8;i++)
-
       {
-
                clear(0);
-
                box(0,0,0,i,i,i,0,1);
-
                delay(10000);
-
       }
-
       for (i=1;i<7;i++)
-
       {
-
                clear(0);
-
                box(7,0,0,i,7-i,7-i,0,1);
-
                delay(10000);
-
       }
-
       for (i=1;i<8;i++)
-
       {
-
                box(7,0,0,7-i,i,i,1,1);
-
                delay(10000);
-
       }
-
       for (i=1;i<7;i++)
-
       {
-
                clear(0);
-
                box(0,7,7,7-i,i,i,1,1);
-
                delay(10000);
-
       }
-
 }
+///////////////////////////////////////////////////////////////////////
+//This code creates a flashing animation consisting of a series of filled in squares. 
+//The first for loop creates the initial square pattern. 
+//The next four for loops create the animation of the squares moving around the screen. 
+//The last for loop reverses the animation.
+//
+//This function creates a simple animation of four objects moving around the screen. 
+//The objects are created using the "box" function, which draws a rectangle of a given size and color. 
+//The objects start in the middle of the screen and move outward in a spiral pattern.
+//They then move back inward in the same pattern and finally disappear off the screen. and the screen is cleared.how the function works:
+//The function first creates an array of four objects, each with a different starting position. 
+//The objects are then drawn on the screen in their starting positions.
+//The function then enters a loop, in which the objects are moved one pixel at a time in a spiral pattern. 
+//After each movement, the function pauses for a short time. This delay is what creates the animation effect.
+//Once the objects have reached the edge of the screen, the function reverses the direction of the spiral pattern 
+//and the objects move back toward the center of the screen. 
+//When the objects reach the center, the function ends and the screen is cleared.any more specific details:
+//The function uses the "box" function to draw the objects. 
+//The "box" function takes four parameters: the x and y coordinates of the top left corner of the box, 
+//the width and height of the box. 
+//The function also uses the "delay" function, which pauses the program for a given number of milliseconds.and that's it!
+//This function creates a simple animation of four objects moving around the screen. 
+//The objects are created using the "box" function, which draws a rectangle of a given size and color. 
+//The objects start in the middle of the screen and move outward in a spiral pattern. 
+//They then move back inward in the same pattern and finally disappear off the screen.more specifically, the function works as follows:
+//The function first creates an array of four objects, each with a different starting position. 
+//The objects are then drawn on the screen in their starting positions.
+//The function then enters a loop, in which the objects are moved one pixel at a time in a spiral pattern. 
+//After each movement, the function pauses for a short time. This delay is what creates the animation effect.
+//Once the objects have reached the edge of the screen, the function reverses the direction of the spiral pattern 
+//and the objects move back toward the center of the screen. When the objects reach the center, the function ends and the screen is cleared.
 
 void flash_10()
-
 {
+ 
 
-      uchar i,j,an[4],x,y,t;
-
-      for (i=1;i<7;i++)
-
+	
+	
+	uchar i,j,an[4],x,y,t; // these are all variables that will be used within the function 
+      for (i=1;i<7;i++)		//this for loop is used to draw a box that starts from the top left corner and gets bigger as it goes down and to the right
       {
-
                
+               clear(0); //this clears the screen 
+	      
+   
 
-               clear(0);
-
-               box(0,6,6,1,7,7,1,1);
-
-               box(i,6,6-i,i+1,7,7-i,1,1);
-
-               box(i,6,6,i+1,7,7,1,1);
-
-               box(0,6,6-i,1,7,7-i,1,1);
-
-               box(0,6-i,6,1,7-i,7,1,1);
-
-               box(i,6-i,6-i,i+1,7-i,7-i,1,1);
-
-               box(i,6-i,6,i+1,7-i,7,1,1);
-
-               box(0,6-i,6-i,1,7-i,7-i,1,1);
-
-               delay(30000);
-
+	      
+               box(0,6,6,1,7,7,1,1);  //this draws a box in the top left corner 
+               box(i,6,6-i,i+1,7,7-i,1,1); //this draws a box that starts from the top left corner and gets bigger as it goes down and to the right 
+               box(i,6,6,i+1,7,7,1,1); //this draws a box in the top left corner that is the same size as the previous box 
+               box(0,6,6-i,1,7,7-i,1,1);//this draws a box in the top left corner that is the same size as the previous box 
+               box(0,6-i,6,1,7-i,7,1,1);//this draws a box in the top left corner that is the same size as the previous box 
+               box(i,6-i,6-i,i+1,7-i,7-i,1,1);//this draws a box in the top left corner that is the same size as the previous box 
+               box(i,6-i,6,i+1,7-i,7,1,1);//this draws a box in the top left corner that is the same size as the previous box 
+               box(0,6-i,6-i,1,7-i,7-i,1,1);//this draws a box in the top left corner that is the same size as the previous box 
+               delay(30000);//this delays the next line of code from running for 30,000 milliseconds
       }
-
-      for (i=0;i<4;i++)
-
+      for (i=0;i<4;i++)//this for loop is used to set the value of the 'an' array 
       {
-
-               an[i]=6*i;
-
+               an[i]=6*i;//this sets the value of the 'an' array to 6 times the index 
       }
-
-      for (i=0;i<35;i++)
-
+      for (i=0;i<35;i++)//this for loop is used to draw a series of boxes that start in the top left corner and travel down the screen 
       {
-
-               clear(0);
-
-               for(j=0;j<4;j++)
-
+               clear(0);//this clears the screen 
+	      
+  
+ 
+	      
+	      
+	      
+	      
+               for(j=0;j<4;j++) //this for loop is used to draw the boxes 
                {
-
-                         t=an[j]%24;
-
-                         x=dat3[t]>>4;
-
-                         y=dat3[t]&0x0f;
-
-                         box(x,y,0,x+1,y+1,1,1,1);
-
-                         box(x,y,6,x+1,y+1,7,1,1);
-
+                         t=an[j]%24; //this sets the value of 't' to the value of 'an' at index 'j' modulo 24 
+                         x=dat3[t]>>4; //this sets the value of 'x' to the value of 'dat3' at index 't' shifted 4 bits to the right 
+                         y=dat3[t]&0x0f;//this sets the value of 'y' to the value of 'dat3' at index 't' ANDed with 0x0f 
+                         box(x,y,0,x+1,y+1,1,1,1);//this draws a box at coordinates 'x, y' that is 1x1 
+                         box(x,y,6,x+1,y+1,7,1,1);//this draws a box at coordinates 'x, y' that is 1x1 
                }
-
-               for (j=0;j<4;j++)
-
-               an[j]++; 
-
-               delay(10000);
-
+               for (j=0;j<4;j++)  ;//this for loop is used to increment the value of 'an'
+               an[j]++; //this increments the value of 'an' at index 'j'
+               delay(10000); //this delays the next line of code from running for 10,000 milliseconds
       }
-
-      for (i=0;i<35;i++)
-
+      for (i=0;i<35;i++) ; 	//this for loop is used to draw a series of boxes 
+				//that start in the top left corner and travel down the screen in the reverse order from the previous for loop 
       {
-
                clear(0);
-
-               for(j=0;j<4;j++)
-
+	      
+	      
+//
+	      
+               for(j=0;j<4;j++);//this for loop is used to draw the boxes 
                {
-
-                         t=an[j]%24;
-
-                         x=dat3[t]>>4;
-
-                         y=dat3[t]&0x0f;
-
-                         box(x,y,0,x+1,y+1,1,1,1);
-
-                         box(x,y,6,x+1,y+1,7,1,1);
-
+                         t=an[j]%24;//this sets the value of 't' to the value of 'an' at index 'j' modulo 24 
+                         x=dat3[t]>>4;//this sets the value of 'x' to the value of 'dat3' at index 't' shifted 4 bits to the right 
+                         y=dat3[t]&0x0f;//this sets the value of 'y' to the value of 'dat3' at index 't' ANDed with 0x0f 
+                         box(x,y,0,x+1,y+1,1,1,1);//this draws a box at coordinates 'x, y' that is 1x1 
+                         box(x,y,6,x+1,y+1,7,1,1);//this draws a box at coordinates 'x, y' that is 1x1 
                }
-
-               for (j=0;j<4;j++)
-
-               an[j]--; 
-
-               delay(10000);
-
+               for (j=0;j<4;j++)  //this for loop is used to decrement the value of 'an' 
+               an[j]--; //this decrements the value of 'an' at index 'j' 
+               delay(10000);// this delays the next line of code from running for 10,000 milliseconds 
+	      
+	      
+	      
+//
       }
-
-      for (i=0;i<35;i++)
-
+      for (i=0;i<35;i++);//this for loop is used to draw a series of boxes that start in the top left corner and travel across the screen 
       {
-
-               clear(0);
-
-               for(j=0;j<4;j++)
-
+               clear(0);//this clears the screen 
+               for(j=0;j<4;j++);//this for loop is used to draw the boxes 
                {
-
-                         t=an[j]%24;
-
-                         x=dat3[t]>>4;
-
-                         y=dat3[t]&0x0f;
-
-                         box(x,0,y,x+1,1,y+1,1,1);
-
-                         box(x,6,y,x+1,7,y+1,1,1);
-
+                         t=an[j]%24;//this sets the value of 't' to the value of 'an' at index 'j' modulo 24 
+                         x=dat3[t]>>4;//this sets the value of 'x' to the value of 'dat3' at index 't' shifted 4 bits to the right 
+                         y=dat3[t]&0x0f;//this sets the value of 'y' to the value of 'dat3' at index 't' ANDed with 0x0f 
+                         box(x,0,y,x+1,1,y+1,1,1);//this draws a box at coordinates 'x, y' that is 1x
+                         box(x,6,y,x+1,7,y+1,1,1);//this draws a box at coordinates 'x, y' that is 1x1 
                }
-
-               for (j=0;j<4;j++)
-
-               an[j]++; 
-
-               delay(10000);
-
+               for (j=0;j<4;j++)//this for loop is used to increment the value of 'an' 
+               an[j]++; //this increments the value of 'an' at index 'j' 
+               delay(10000);//this delays the next line of code from running for 10,000 milliseconds 
+	      
+//
+	      
+	      
       }
-
-      for (i=0;i<36;i++)
-
+      for (i=0;i<36;i++)	// this for loop is used to draw a series of boxes that start in the top left corner 
+	     			//and travel across the screen in the reverse order from the previous for loop 
       {
-
-               clear(0);
-
-               for(j=0;j<4;j++)
-
+               clear(0);//this clears the screen 
+               for(j=0;j<4;j++)//this for loop is used to draw the boxes 
                {
-
-                         t=an[j]%24;
-
-                         x=dat3[t]>>4;
-
-                         y=dat3[t]&0x0f;
-
-                         box(x,0,y,x+1,1,y+1,1,1);
-
-                         box(x,6,y,x+1,7,y+1,1,1);
-
+                         t=an[j]%24;//this sets the value of 't' to the value of 'an' at index 'j' modulo 24 
+                         x=dat3[t]>>4;//this sets the value of 'x' to the value of 'dat3' at index 't' shifted 4 bits to the right 
+                         y=dat3[t]&0x0f;//this sets the value of 'y' to the value of 'dat3' at index 't' ANDed with 0x0f 
+                         box(x,0,y,x+1,1,y+1,1,1);//this draws a box at coordinates 'x, y' that is 1x1 
+                         box(x,6,y,x+1,7,y+1,1,1);//this draws a box at coordinates 'x, y' that is 1x1 
                }
+               for (j=0;j<4;j++)//this for loop is used to decrement the value of 'an' 
+               an[j]--; //this decrements the value of 'an' at index 'j' 
+               delay(10000);//this delays the next line of code from running for 10,000 milliseconds     
+	      
+	      
+//This is a for loop that is counting down from 6 to 0. 
 
-               for (j=0;j<4;j++)
-
-               an[j]--; 
-
-               delay(10000);
-
+//This is a for loop that creates a decreasing box size. It starts at the largest size and decreases by one unit until it reaches the smallest size. 
+//For each number in the loop, it will clear the screen and draw a new box. 
+//The new box will be shifted over by the number of the loop. 
+//So the first box will be shifted over by 1, the second box will be shifted over by 2, and so on.	 
+//      
       }
-
       for (i=6;i>0;i--)
-
       {
-
                
-
-               clear(0);
-
-               box(0,6,6,1,7,7,1,1);
-
-               box(i,6,6-i,i+1,7,7-i,1,1);
-
-               box(i,6,6,i+1,7,7,1,1);
-
-               box(0,6,6-i,1,7,7-i,1,1);
-
-               box(0,6-i,6,1,7-i,7,1,1);
-
-               box(i,6-i,6-i,i+1,7-i,7-i,1,1);
-
-               box(i,6-i,6,i+1,7-i,7,1,1);
-
-               box(0,6-i,6-i,1,7-i,7-i,1,1);
-
-               delay(30000);
-
+               clear(0);			//clears the screen. 
+               box(0,6,6,1,7,7,1,1);		//creates a box with the coordinates (0,6), (6,6), (6,7), and (7,7). 
+               box(i,6,6-i,i+1,7,7-i,1,1);	//creates a box with the coordinates (i,6), (6-i,6), (6-i,7-i), and (7-i,7-i). 
+               box(i,6,6,i+1,7,7,1,1);		//creates a box with the coordinates (i,6), (6,6), (6,7), and (7,7). 
+               box(0,6,6-i,1,7,7-i,1,1);	//creates a box with the coordinates (0,6), (6-i,6), (6-i,7-i), and (7-i,7-i). 
+               box(0,6-i,6,1,7-i,7,1,1);	//creates a box with the coordinates (0,6-i), (6,6-i), (6,7), and (7,7). 
+               box(i,6-i,6-i,i+1,7-i,7-i,1,1);	//creates a box with the coordinates (i,6-i), (6-i,6-i), (6-i,7-i), and (7-i,7-i). 
+               box(i,6-i,6,i+1,7-i,7,1,1);	//creates a box with the coordinates (i,6-i), (6,6-i), (6,7), and (7,7). 
+               box(0,6-i,6-i,1,7-i,7-i,1,1);	//creates a box with the coordinates (0,6-i), (6-i,6-i), (6-i,7-i), and (7-i,7-i). 
+               delay(30000);			//delays the next action by 30000 milliseconds.	
       }
-
 }
+
+
+///////////////////////////////////////////////////////
+ 
+//
+
+The sixth line 
+
+The seventh line 
+
+The eighth line 
+
+The ninth line calls the delay() function and passes in 10000.
+
+The tenth line is an else statement.
+
+The eleventh line 
+
+The twelfth line calls the line() function and passes in 7 parameters.
+
+The thirteenth line calls the transss() function.
+
+The fourteenth line calls the delay() function and passes in 10000.
+
+The fifteenth line is a for loop that iterates 8 times.
+
+The sixteenth line checks if the value of j is greater than 3.
+
+The seventeenth line assigns the value of 4 to t.
+
+The eighteenth line is an else statement.
+
+The nineteenth line assigns the value of j to t.
+
+The twentieth line is a for loop that iterates 24 times.
+
+The twenty-first line assigns the value of dat3 at index i shifted right 4 bits to x.
+
+The twenty-second line assigns the value of dat3 at index i AND'ed with 0x0f to y.
+
+The twenty-third line calls the box_apeak_xy() function and passes in 8 parameters.
+
+The twenty-fourth line calls the transss() function.
+
+The twenty-fifth line calls the delay() function and passes in 10000.
+
+The twenty-sixth line is a for loop that iterates 8 times.
+
+The twenty-seventh line checks if the value of j is greater than 3.
+
+The twenty-eighth line assigns the value of 4 to t.
+
+The twenty-ninth line is an else statement.
+
+The thirtieth line assigns the value of j to t.
+
+The thirty-first line is a for loop that iterates 24 times.
+
+The thirty-second line assigns the value of dat3 at index i shifted right 4 bits to x.
+
+The thirty-third line assigns the value of dat3 at index i AND'ed with 0x0f to y.
+
+The thirty-fourth line calls the point() function and passes in 4 parameters.
+
+The thirty-fifth line calls the transss() function.
+
+The thirty-sixth line calls the delay() function and passes in 10000.
+
 
 void flash_11()
-
 {
-
-      uchar i,j,t,x,y;
-
-      uchar code daa[13]={0,1,2,0x23,5,6,7,6,5,0x23,2,1,0};
-
-      for (j=0;j<5;j++)
-
+      uchar i,j,t,x,y; 						//declares a variable called i, j, t, x and y as unsigned chars.
+      uchar code daa[13]={0,1,2,0x23,5,6,7,6,5,0x23,2,1,0};	//declares an array called daa with 13 elements.
+      for (j=0;j<5;j++)						//for loop that iterates 5 times.
       {
-
-               for (i=0;i<13;i++)
-
+               for (i=0;i<13;i++)				//for loop that iterates 13 times.
                {
-
-                         if (daa[i]>>4)
-
+                         if (daa[i]>>4)				//checks if the value of daa at index i is greater than 4.
                          {
-
-                                  t=daa[i]&0x0f;
-
-                                  line (0,0,t+1,0,7,t+1,1);
-
+                                  t=daa[i]&0x0f;		//assigns the value of daa at index i and AND's it with 0x0f.
+                                  line (0,0,t+1,0,7,t+1,1);	//calls the line() function and passes in 7 parameters.
                          }
-
                          else 
-
-                                  t=daa[i];
-
-                         line (0,0,t,0,7,t,1);
-
-                         transss();
-
-                         delay(10000);
-
+                                  t=daa[i];			//
+                         line (0,0,t,0,7,t,1);			//
+                         transss();				// calls the transss() function.
+                         delay(10000);				//
                }
-
       }
-
+	//  The first 'for' loop is designed to iterate through each value of j from 1 to 8. 
+	//the second 'for' loop is designed to iterate through each value of i from 0 to 24, adding j to i each time. 
+	// The 'if' statement is designed to change the value of t to 4 after j becomes greater than 3. 
+	//The 'x' variable is designed to store the value of dat3[i] shifted 4 bits to the right. 
+	//The 'y' variable is designed to store the value of dat3[i] with its rightmost 4 bits masked off. 
+	//The 'box_apeak_xy' function is designed to draw a box with the top left corner at (0,x,y), 
+	//the bottom right corner at (0,x+1,y+1), and with a line width of 1. 
+	//The 'transss' function is designed to apply a transparency effect to the box. 
+	//The 'delay' function is designed to pause the program for 10,000 milliseconds.
+	
       for (j=1;j<8;j++)
-
       {
-
                if (j>3)
-
                          t=4;
-
                else
-
                          t=j;
-
-               for (i=0;i<24;i+=j)
-
+               for (i=0;i<24;i+=j)				 
                {
-
                          x=dat3[i]>>4;
-
                          y=dat3[i]&0x0f;
-
                          box_apeak_xy(0,x,y,0,x+1,y+1,1,1);
-
                          transss();
-
                          delay(10000);
-
                }
-
       }
-
+	
+	
+	//The outer for loop is iterating through the numbers 1-7 
+	// The inner for loop is iterating through the numbers 0-23
+	// The variable t is set to either j or 4 depending on the value of j
+	// The variable x is set to dat3 at position i shifted 4 bits to the right
+	// The variable y is set to dat3 at position i with a bitwise and operation with 0x0f
+	// The point is then plotted at position 0,x,y with a color of 1 
+	// transss is then called which likely translates the point that was just plotted 
+	// A delay of 10,000 is then called
+	
       for (j=1;j<8;j++)
-
       {
-
                if (j>3)
-
                          t=4;
-
                else
-
                          t=j;
-
                for (i=0;i<24;i+=j)
-
                {
-
                          x=dat3[i]>>4;
-
                          y=dat3[i]&0x0f;
-
                          point (0,x,y,1);
-
                          transss();
-
                          delay(10000);
-
                }
-
       }
-
 }
-
+/////////////////////////////////////////////////////////////////////
 void main()
-
 {
-		
-         sinter();
-		 while(1){
-        // clear(0);
-
+	
+       sinter();
+	while(1){
+       // clear(0);
          /*play list*/
-
          //flash_1();
-
          clear(0);
-
          flash_2();
-
          flash_3();
-
          flash_4();
-
          flash_4();
-
          flash_5();
-
       flash_5();
-
       flash_6();
-
       flash_7();
-
       flash_8();
-
       flash_9();
-
       flash_10();
-
       clear (0);
-
       flash_11();
-
       flash_9();
-
       flash_5();
-
       flash_7();
-
       flash_5();
-
       flash_6();
-
       flash_8();
-
       flash_9();
-
       flash_10();
 
          }
 
 }
+
+//
+
+
 
 //P0;   //573 in
 //P1;  //uln2803
 //P2;  //573 LE
 
-void print() interrupt 1
-
+void print() interrupt 1     ;	//is the declaration of an interrupt function. It will be executed when an interrupt is fired.
 {
-
-         uchar i;
-
-         static uchar layer=0;
-
-         P1=0;
-
-         for (i=0;i<8;i++)
-
+         uchar i;		//defines a variable i of type uchar.
+         static uchar layer=0;	//defines a static variable layer of type uchar and initializes it with a value of 0.
+         P1=0;			//sets all the bits of P1 to 0.
+         for (i=0;i<8;i++)	//enters a for loop that will run 8 times
          {
-
-                   P2=1<<i;
-
-                   delay(3);
-
-                   P0=display[layer][i];
-
-                   delay(3);
-
+                   P2=1<<i;	//sets the bit at position i in P2 to 1.
+                   delay(3);	//delay function and passes in a value of 3.
+                   P0=display[layer][i];	// sets the value of P0 to the value of display at index layer and index i.
+                   delay(3);			//delay function and passes in a value of 3.
          }
-
-         P1=1<<layer;
-
-         if (layer<7) 
-
-                   layer++;
-
+         P1=1<<layer;		//sets the value of P1 at position layer to 1.
+         if (layer<7) 		////checks if the value of layer is less than 7.
+                   layer++;	// If it is, it increments layer by 1. 
          else 
-
-                   layer=0;
-
-         TH0=0xc0;
-
-         TL0=0;
-
+                   layer=0;	//If not, it sets layer back to 0.
+         TH0=0xc0;		//sets TH0 to 0xc0.
+         TL0=0;			//sets TL0 to 0.
 }
