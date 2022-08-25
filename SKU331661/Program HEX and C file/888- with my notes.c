@@ -354,7 +354,7 @@ The forth is the enable io,it controls weather draw or claen.*/
 //If "cpp" is greater than 63, "c" is set equal to 7 minus "c."
 //Finally, the function calls the "point" function, passing in the four parameters "a," "b," "c," and "le."
 
-xxx
+
 
 
 void cirp(char cpp,uchar dir,uchar le)
@@ -390,6 +390,12 @@ void cirp(char cpp,uchar dir,uchar le)
          }
 
 }
+
+
+//This code is for drawing a line from point (x1, y1, z1) to point (x2, y2, z2) with a given length 'le'. 
+//First, it finds the longest side of the line, then calculates how much to increment each coordinate 
+//by for each point on the line using the proportion of the longest side. 
+//Finally, it draws the line point by point using a for loop.
 
 void line(uchar x1,uchar y1,uchar z1,uchar x2,uchar y2,uchar z2,uchar le)
 
@@ -434,6 +440,37 @@ void line(uchar x1,uchar y1,uchar z1,uchar x2,uchar y2,uchar z2,uchar le)
          point(x2,y2,z2,le);
 
 }
+
+
+//This code is for a 3D cube. 
+//The first three lines { uchar i,j,t=0; max(&x1,&x2); max(&y1,&y2); max(&z1,&z2); } set up the variables for the code. 
+//The next line for (i=x1;i<=x2;i++) t|=1<<i; sets up a for loop that will run from x1 to x2, and will set t equal to 1 shifted left by i each time. 
+//The next line if (!le) t=~t; will flip all the bits in t if le is not equal to 1. 
+//The next line if (fill) { sets up an if statement that will run the code inside the curly braces if fill is equal to 1. 
+//The next three lines { for (i=z1;i<=z2;i++) { for (j=y1;j<=y2;j++) display[j][i]|=t; } } will set up a for loop that will run from z1 to z2, 
+//and will set the value of display[j][i] equal to t ORed with the current value of display[j][i]. 
+//The code inside the curly braces { } will then run again, this time from y1 to y2. 
+//If fill is not equal to 1, the code inside the else statement will run. 
+//The next four lines 
+//{ display[y1][z1]|=t; display[y2][z1]|=t; display[y1][z2]|=t; display[y2][z2]|=t; } 
+//will set the value of display[y1][z1], display[y2][z1], display[y1][z2], and display[y2][z2] all equal to t ORed with the current value of each. 
+//The next line t=(0x01<<x1)|(0x01<<x2); sets t equal to 1 shifted left by x1 ORed with 1 shifted left by x2. 
+//The next line if (!le) t=~t; will flip all the bits in t if le is not equal to 1. 
+//The next line if (le) { sets up an if statement that will run the code inside the curly braces if le is equal to 1. 
+//The next three lines 
+//{ for (j=z1;j<=z2;j+=(z2-z1)) { for (i=y1;i<=y2;i++) display[i][j]|=t; } for (j=y1;j<=y2;j+=(y2-y1)) { for (i=z1;i<=z2;i++) display[j][i]|=t; } } 
+//will set up a for loop that will run from z1 to z2, and will set the value of display[i][j] equal to t ORed with the current value of display[i][j]. 
+//The code inside the curly braces { } will then run again, this time from y1 to y2. 
+//The code inside the curly braces { } will then run again, this time from z1 to z2. 
+//The code inside the curly braces { } will then run again, this time from y1 to y2. 
+//If le is not equal to 1, the code inside the else statement will run. 
+//The next three lines 
+//{ for (j=z1;j<=z2;j+=(z2-z1)) { for (i=y1;i<=y2;i++) { display[i][j]&=t; } } for (j=y1;j<=y2;j+=(y2-y1)) { for (i=z1;i<=z2;i++) { display[j][i]&=t; } } } 
+//will set up a for loop that will run from z1 to z2, and will set the value of display[i][j] equal to t ANDed with the current value of display[i][j]. 
+//The code inside the curly braces { } will then run again, this time from y1 to y2. 
+//The code inside the curly braces { } will then run again, this time from z1 to z2. 
+//The code inside the curly braces { } will then run again, this time from y1 to y2.
+
 
 void box(uchar x1,uchar y1,uchar z1,uchar x2,uchar y2,uchar z2,uchar fill,uchar le)
 
@@ -595,6 +632,8 @@ void box(uchar x1,uchar y1,uchar z1,uchar x2,uchar y2,uchar z2,uchar fill,uchar 
 
 }
 
+
+//xxx
 void box_apeak_xy(uchar x1,uchar y1,uchar z1,uchar x2,uchar y2,uchar z2,uchar fill,uchar le)
 
 {
