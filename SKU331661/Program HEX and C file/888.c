@@ -1,3 +1,7 @@
+// 26.8.2022... I have added lots of comments that were lacking, still needs lots of work...
+
+
+
 #include <REG52.H>
 #include <intrins.h>
 #define uchar unsigned char
