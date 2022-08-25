@@ -284,7 +284,13 @@ void trailler(uint speed)
          }
 
 }
-
+//This is a function that sets a single LED at the coordinates (x, y, z) to the state "le". 
+//"le" is short for "level", with 1 meaning on and 0 meaning off. 
+//The function works by creating a bitmask with a 1 in the position of the LED to be set. 
+//It then ANDs or ORs this mask with the current value of the byte in the display array corresponding to the LED's position. 
+//This changes the state of only the one LED.
+	
+	
 void point(uchar x,uchar y,uchar z,uchar le)
 
 {
@@ -305,6 +311,15 @@ void point(uchar x,uchar y,uchar z,uchar le)
 
 }
 
+
+
+//This code is defining a function to print a character on the screen. 
+//The function takes in two parameters, the character to be printed (cha), 
+//and the y-coordinate on the screen where the character should be printed. 
+//The code then loops through each column of pixels in the character, 
+//and sets the corresponding pixels in the display array to the corresponding pixels in the table_cha array.
+	
+
 void type(uchar cha,uchar y)
 
 {        
@@ -322,12 +337,25 @@ void type(uchar cha,uchar y)
 }
 
 /*The first variable is the distance from the midpoint.
-
 The second is the layer.
-
 the third is the flash speed of the time between each two point.
-
 The forth is the enable io,it controls weather draw or claen.*/
+
+//This is a function definition for a function called "cirp." 
+//The function takes in three parameters - "cpp" (a character), "dir" (a unsigned character), and "le" (a unsigned character).
+//Inside the function, there is an if statement that checks if "cpp" is less than 128 and greater than or equal to 0. 
+//If that is true, the code inside the if statement will run.
+//The code inside the if statement initializes a variable called "cp." 
+//If the "dir" parameter is true, "cp" will be set to 127 minus "cpp." If "dir" is false, "cp" will be set equal to "cpp."
+//The code then initializes three variables - "a," "b," and "c." 
+//"a" is set equal to the result of shifting "dat[cp]" right 5 bits and ANDing it with 0x07. 
+//"b" is set equal to the result of shifting "dat[cp]" right 2 bits and ANDing it with 0x07. 
+//"c" is set equal to the result of ANDing "dat[cp]" with 0x03.
+//If "cpp" is greater than 63, "c" is set equal to 7 minus "c."
+//Finally, the function calls the "point" function, passing in the four parameters "a," "b," "c," and "le."
+
+xxx
+
 
 void cirp(char cpp,uchar dir,uchar le)
 
