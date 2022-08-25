@@ -1078,7 +1078,16 @@ void roll_3_xy(uchar n,uint speed)
 
 }
 /////////////////////////
-// xxx
+//This is a function that shifts all the pixels in an 8x8 display by one pixel to the right. 
+//The function takes in two parameters: z, which is the row of the display that is being shifted, 
+//and speed, which is the delay between each pixel shifting. 
+//The function first shifts all the pixels in the row by one pixel to the right, then delays for the specified time before shifting the next row.
+//This is a function that shifts all the bits in an array over by one to the right. 
+//The function takes in two parameters, z which is the array to shift and speed which is the amount of time to delay between each shift. 
+//The function first loops through each row in the array. For each row, it loops through each column and shifts the bits over by one. 
+//After shifting all the bits, the function delays for the amount of time specified by the speed parameter. 
+//The outer for loop iterates over the 8 rows in the display, and the inner for loop iterates over the 8 columns. 
+//For each row and column, the code shifts the value in display[z][i] one pixel to the right.
 
 
 void trans(uchar z,uint speed)
@@ -1104,6 +1113,15 @@ void trans(uchar z,uint speed)
          }
 
 }
+///////////////////////////
+//This function is responsible for outputting a character to the screen, one line at a time. 
+//The character is defined by the variable "c", and the speed is defined by the variable "speed". 
+//The first for loop is responsible for outputting the character one line at a time. 
+//The second for loop is responsible for actually outputting the character to the screen. 
+//The third for loop delays the output by the amount specified by the "speed" variable.
+//The character is passed in as the "c" parameter, and the speed is passed in as the "speed" parameter. 
+//The function loops through each column in the character, outputting the column to the display. 
+//The speed parameter controls the delay between outputting each column.
 
 void tranoutchar(uchar c,uint speed)
 
@@ -1148,6 +1166,8 @@ void tranoutchar(uchar c,uint speed)
          }
 
 }
+//////////////////////////////
+//This is a function that shifts all of the values in the display array to the left by one.
 
 void transss()
 
@@ -1171,105 +1191,115 @@ void transss()
 
 /*From now on,the function below is to display the flash.*/
 
+//////////////////////
+//This function is called flash_1().
+//The first line clears the screen.
+//The second line types "1" on the screen.
+//The third line delays for 60,000 milliseconds.
+//The fourth line types "2" on the screen.
+//The fifth line delays for 60,000 milliseconds.
+//The sixth line types "3" on the screen.
+//The seventh line delays for 60,000 milliseconds.
+//The eighth line types "4" on the screen.
+//The ninth line delays for 60,000 milliseconds.
+//The tenth line delays for 60,000 milliseconds.
+//The eleventh line clears the screen.
+//The twelfth line rolls the display.
+//The thirteenth line types "0" on the screen.
+//The fourteenth line delays for 60,000 milliseconds.
+//The fifteenth line calls the trailler() function.
+//The sixteenth line delays for 60,000 milliseconds.
+
+
 void flash_1()
 
 {
-
- 
-
          clear(0);
-
          type(1,0);
-
          delay(60000);
-
          type(2,0);
-
          delay(60000);
-
          type(3,0);
-
          delay(60000);
-
          type(4,0);
-
          delay(60000);
-
          delay(60000);
-
          clear(0);
-
          rolldisplay(30000);
-
          type(0,7);
-
          delay(60000);
-
          trailler(6000);
-
          delay(60000);
-
 }
+///////////
+//This code is for a function called flash_2. 
+//The first for loop runs from 129 to 1, and for each number in that range, 
+//   it turns on the LED at position i-2, then delays for 8 seconds. 
+//   Then, it turns off the LED at position i-1. 
+//After the first for loop has finished running, there is a delay of 8 seconds. 
+//The second for loop runs from 0 to 136. 
+//  For each number in that range, it turns on the LED at position i, 
+//  delays for 8 seconds, then turns off the LED at position i-8. 
+//After the second for loop has finished running, there is a delay of 8 seconds. 
+//The third for loop is the same as the first, except that it only runs from 129 to 1. 
+//After the third for loop has finished running, there is a delay of 8 seconds. 
+//The fourth for loop is the same as the second, except that it only runs from 0 to 128. 
+//After the fourth for loop has finished running, there is a delay of 60 seconds.
+
+
+
+////////////////////////////
+//This is a function that flashes two lights on and off. 
+//The first for loop runs from 129 to 1, decrementing by 1 each time. 
+//It turns on the light at position i-2 and then delays for 8 seconds. 
+//It then turns off the light at position i-1. 
+//After the for loop has finished running, there is another delay of 8 seconds. 
+//The second for loop runs from 0 to 136, incrementing by 1 each time. 
+//It turns on the light at position i and then delays for 8 seconds. 
+//It then turns off the light at position i-8. 
+//After the second for loop has finished running, there is another delay of 8 seconds. 
+//The third for loop is the same as the first, but it does not turn off any lights. 
+//After the third for loop has finished running, there is another delay of 8 seconds. 
+//The fourth for loop is the same as the second, but it does not turn on any lights. 
+//After the fourth for loop has finished running, there is a final delay of 60 seconds.
+
 
 void flash_2()
-
 {
-
          uchar i;
-
          for (i=129;i>0;i--)
-
          {
-
                    cirp(i-2,0,1);
-
                    delay(8000);
-
                    cirp(i-1,0,0);
-
          }
-
          delay(8000);     
-
          for (i=0;i<136;i++)
-
          {
-
                    cirp(i,1,1);
-
                    delay(8000);
-
                    cirp(i-8,1,0);
-
          }
-
          delay(8000);
-
                   for (i=129;i>0;i--)
-
          {
-
                    cirp(i-2,0,1);
-
                    delay(8000);
-
          }
-
          delay(8000);
-
                    for (i=0;i<128;i++)
-
          {
-
                    cirp(i-8,1,0);
-
                    delay(8000);
-
          }
-
          delay(60000);  
-
 }
+//////////////////////////////////////////////
+//This function is called flash_3(). 
+//It contains a for loop that will run 8 times. 
+//Each time the loop runs, it will create a box on the screen that is 7 units wide and 7 units tall. 
+//The box will be located at position (0,i) on the screen. 
+//The function will then pause for 20,000 milliseconds before either deleting the box or moving on to the next iteration of the loop.
 
 void flash_3()
 
@@ -1320,583 +1350,468 @@ void flash_3()
          }
 
 }
+/////////////////////////////////////////////
+//This is a function that creates a "flash" effect with 8 lines. 
+//The first for loop sets the value of j to 7, and as long as j is less than 15, the value of j is incremented by 1. The value of an[j-7] is set to j. 
+//The second for loop sets the value of i to 0, and as long as i is less than or equal to 16, the value of i is incremented by 1. 
+//The third for loop sets the value of j to 0, and as long as j is less than 8, the value of j is incremented by 1. 
+//   If the value of an[j] is less than 8 and greater than or equal to 0, 
+//   then a line is drawn from point (0, an[j]) to point (j, 7) with a color corresponding to the value of an[j]. 
+//The fourth for loop does the same thing as the third for loop, 
+//   except it draws a line from point (0, an[j]+1) to point (j, 7) with a color corresponding to the value of an[j]+1. 
+//The fifth for loop sets the value of j to 0, and as long as j is less than 8, the value of j is incremented by 1. 
+//    If the value of an[j] is greater than 0, then the value of an[j] is decremented by 1. 
+//A delay is created, and then the process repeats with the sixth for loop. 
+//The sixth for loop sets the value of j to 0, and as long as j is less than 8, 
+//the value of j is incremented by 1. The value of an[j] is set to 1-j. 
+//The seventh for loop does the same thing as the third for loop, 
+// except it draws a line from point (0, an[j]) to point (j, 7) with a color corresponding to the value of an[j]. 
+//The eighth for loop does the same thing as the fourth for loop, 
+// except it draws a line from point (0, an[j]-1) to point (j, 7) with a color corresponding to the value of an[j]-1. 
+//The ninth for loop sets the value of j to 0, and as long as j is less than 8, 
+// the value of j is incremented by 1. If the value of an[j] is less than 7, then the value of an[j] is incremented by 1. 
+//A delay is created, and then the process repeats.
+
 
 void flash_4()
-
 {
-
          char i,j,an[8];
-
          for (j=7;j<15;j++)
-
                    an[j-7]=j;
-
          for (i=0;i<=16;i++)
-
          {
-
                    for (j=0;j<8;j++)
-
                    {
-
                             if ((an[j]<8)&(an[j]>=0))
-
                             line(0,an[j],j,7,an[j],j,1);
-
                    }
-
                    for (j=0;j<8;j++)
-
                    {
-
                             if (((an[j]+1)<8)&(an[j]>=0))
-
                             line(0,an[j]+1,j,7,an[j]+1,j,0);
-
                    }
-
                    for (j=0;j<8;j++)
-
                    {
-
                             if (an[j]>0)
-
                             an[j]--;
-
                    }
-
                    delay(15000);
-
          }
-
          for (j=0;j<8;j++)
-
                    an[j]=1-j;
-
          for (i=0;i<=16;i++)
-
          {
-
                    for (j=0;j<8;j++)
-
                    {
-
                             if ((an[j]<8)&(an[j]>=0))
-
                             line(0,an[j],j,7,an[j],j,1);
-
                    }
-
                    for (j=0;j<8;j++)
-
                    {
-
                             if (((an[j]-1)<7)&(an[j]>0))
-
                             line(0,an[j]-1,j,7,an[j]-1,j,0);
-
                    }
-
                    for (j=0;j<8;j++)
-
                    {
-
                             if (an[j]<7)
-
                             an[j]++;
-
                    }
-
                    delay(15000);
-
          }
-
 }
+//////////////////////////////////////////////////
+// This code is creating a flashing light effect using boxes. 
+//The first for loop is creating the boxes and the second for loop is making the boxes flash.
+
+//The code defines a function called "flash_5." 
+//The function includes a "for" loop that iterates four times. 
+//Each time the loop runs, it defines two variables, "i" and "j," and sets their values to 8 and 7, respectively. 
+//The loop then runs a series of commands that result in a flashing light effect. 
+//Finally, the function ends with a delay of 15000 milliseconds.
+
 
 void flash_5()
-
 {
-
          uint a=15000;//a=delay
-
          char i=8,j,an[4];
 
-         //1
-
+//1
          for (j=7;j<11;j++)
-
                    an[j-7]=j;
-
          while(i--)
-
          {
-
                    for (j=0;j<4;j++)
-
                    {
-
                             if (an[j]<8)
-
                             box_apeak_xy(j,an[j],j,7-j,an[j],7-j,0,1);
-
                             if (an[j]<7)
-
                             box_apeak_xy(j,an[j]+1,j,7-j,an[j]+1,7-j,0,0);
-
                    }
-
                    for (j=0;j<4;j++)
-
                    {
-
                             if (an[j]>3)
-
                             an[j]--;
-
                    }
-
                    delay(a);
-
          }
 
-         //2
-
+	
+//2
+//
+//1. The code sets the value of i to 3.
+//2. It then enters a for loop that will run 4 times. 
+//3. The code sets the value of an[j] to 5-j.
+//4. It then enters a while loop that will run 3 times. 
+//5. The code enters another for loop that will also run 4 times. 
+//6. If the value of an[j] is less than 4, the code will run the box_apeak_xy function. 
+//7. If the value of an[j] is less than 3, the code will run the box_apeak_xy function again. 
+//8. The code then exits the for loop.
+//9. The code enters another for loop that will run 4 times. 
+//10. If the value of an[j] is greater than 0, the code will decrement the value of an[j]. 
+//11. The code then exits the for loop.
+//12. The code then exits the while loop.	
+	
+	
          i=3;
-
          for (j=0;j<4;j++)
-
          an[j]=5-j;
-
          while(i--)
-
          {
-
                    for (j=1;j<4;j++)
-
                    {
-
                             if (an[j]<4)
-
                             box_apeak_xy(j,an[j],j,7-j,an[j],7-j,0,1);
-
                             if (an[j]<3)
-
                             box_apeak_xy(j,an[j]+1,j,7-j,an[j]+1,7-j,0,0);
-
                    }
-
                    for (j=0;j<4;j++)
-
                    {
-
                             if (an[j]>0)
-
                             an[j]--;
-
                    }
-
                    delay(a);
-
          }
 
-         //3
-
-         i=3;
-
+	
+	
+//3
+//The next line declares a variable called "i" and assigns it the value 3.
+//The next line is a for loop. It will execute the code inside the braces 3 times. The variable "j" is declared and initialized to 1. The code inside the braces will be executed. Then, the variable "j" will be incremented by 1. This will continue until the value of "j" is greater than 4.
+//The next line is a while loop. It will execute the code inside the braces while the variable "i" is greater than 0.
+//The next line is another for loop. It will execute the code inside the braces 3 times. The variable "j" is declared and initialized to 1. The code inside the braces will be executed. Then, the variable "j" will be incremented by 1. This will continue until the value of "j" is greater than 4.
+//The next line is an if statement. It will execute the code inside the braces if the variable "an[j]" is greater than or equal to 0.
+//The next line is another if statement. It will execute the code inside the braces if the variable "an[j]" is greater than 0.
+//The next line is a for loop. It will execute the code inside the braces 3 times. The variable "j" is declared and initialized to 1. The code inside the braces will be executed. Then, the variable "j" will be incremented by 1. This will continue until the value of "j" is greater than 4.
+//The next line is an if statement. It will execute the code inside the braces if the variable "an[j]" is less than 3.
+//The next line will increment the variable "an[j]" by 1.
+//The next line will delay the execution of the code by "a" milliseconds.
+	
+	i=3;
          for (j=1;j<4;j++)
-
          an[j]=4-j;
-
          while(i--)
-
          {
-
                    for (j=1;j<4;j++)
-
                    {
-
                             if (an[j]>=0)
-
                             box_apeak_xy(j,an[j],j,7-j,an[j],7-j,0,1);
-
                             if (an[j]>0)
-
                             box_apeak_xy(j,an[j]-1,j,7-j,an[j]-1,7-j,0,0);
-
                    }
-
                    for (j=1;j<4;j++)
-
                    {
-
                             if (an[j]<3)
-
                             an[j]++;
-
                    }
-
                    delay(a);
-
          }
 
- 
-
-         //4
-
-         i=3;
-
+//4
+//i is initialized to 3.
+//For loop iterates from j=0 to j<4. 
+//an[j] is assigned j+1.
+//While loop iterates until i becomes 0. 
+//For loop iterates from j=1 to j<4.
+//If an[j] is greater than 3, box_apeak_xy function is called with arguments (j, an[j], j, 7-j, an[j], 7-j, 0, 1).
+//If an[j] is greater than 3, box_apeak_xy function is called with arguments (j, an[j]-1, j, 7-j, an[j]-1, 7-j, 0, 0).
+//For loop iterates from j=0 to j<4. 
+//an[j] is incremented by 1.
+//delay(a) function is called.
+	
+	
+	i=3;
          for (j=0;j<4;j++)
-
          an[j]=j+1;
-
          while(i--)
-
          {
-
                    for (j=1;j<4;j++)
-
                    {
-
                             if (an[j]>3)
-
                             box_apeak_xy(j,an[j],j,7-j,an[j],7-j,0,1);
-
                             if (an[j]>3)
-
                             box_apeak_xy(j,an[j]-1,j,7-j,an[j]-1,7-j,0,0);
-
                    }
-
                    for (j=0;j<4;j++)
-
                             an[j]++;
-
                    delay(a);
-
          }
 
-         //5
-
-         i=3;
-
+	
+	
+	
+//5
+ 
+//i is set to 3, and then a for loop runs from 3 to 6, setting each value of an to j. 
+//Then, there is a while loop that runs until i is no longer positive. 
+//Inside of the while loop, there is another for loop that runs from 1 to 4. 
+//This for loop prints out the asterisks in the diamond pattern. 
+//After the for loop, there is another for loop that runs from 0 to 4. 
+//If the value of an at the current index is greater than 3, the value is decremented by 1. 
+//Then, delay is called with the parameter a.	
+  
+	i=3;
          for (j=3;j<6;j++)
-
                    an[j-2]=j;
-
          while(i--)
-
          {
-
                    for (j=1;j<4;j++)
-
                    {
-
                             box_apeak_xy(j,an[j],j,7-j,an[j],7-j,0,1);
-
                             box_apeak_xy(j,an[j]+1,j,7-j,an[j]+1,7-j,0,0);
-
                    }
-
                    for (j=0;j<4;j++)
-
                    {
-
                             if (an[j]>3)
-
                             an[j]--;
-
                    }
-
                    delay(a);
-
          }
 
-         //6
-
-         i=3;
-
+//6
+//i=3 means that the loop will iterate 3 times
+//j<4 means that the inner loop will iterate 4 times
+//an[j]=5-j means that the value of an will be 5-j
+//while(i--) means that the loop will continue while i is not equal to 0
+//for (j=1;j<4;j++) means that the inner loop will iterate 4 times
+//if (an[j]<4) means that if the value of an is less than 4, it will execute the next line
+//box_apeak_xy(j,an[j],j,7-j,an[j],7-j,0,1); means that it will create a box with the given parameters
+//if (an[j]<3) means that if the value of an is less than 3, it will execute the next line
+//box_apeak_xy(j,an[j]+1,j,7-j,an[j]+1,7-j,0,0); means that it will create a box with the given parameters
+//for (j=0;j<4;j++) means that the inner loop will iterate 4 times
+//if (an[j]>0) means that if the value of an is greater than 0, it will execute the next line
+//an[j]--; means that the value of an will be decremented by 1
+//delay(a); means that it will wait for 'a' milliseconds before executing the next line
+  
+	
+	 i=3;
          for (j=0;j<4;j++)
-
          an[j]=5-j;
-
          while(i--)
-
          {
-
                    for (j=1;j<4;j++)
-
                    {
-
                             if (an[j]<4)
-
                             box_apeak_xy(j,an[j],j,7-j,an[j],7-j,0,1);
-
                             if (an[j]<3)
-
                             box_apeak_xy(j,an[j]+1,j,7-j,an[j]+1,7-j,0,0);
-
                    }
-
                    for (j=0;j<4;j++)
-
                    {
-
                             if (an[j]>0)
-
                             an[j]--;
-
                    }
-
                    delay(a);
-
          }
 
-         //7
+//7
+//The code creates a for loop that iterates 4 times. 
+//For each iteration, the value of j is set to 0. The code then sets the value of an[j] to 3-j. The value of an[0] is set to 2. 
+//The code then enters a while loop that runs as long as the value of i is greater than 0. 
+//The code inside the while loop creates a for loop that iterates 3 times. 
+//For each iteration, the code checks if the value of an[j] is greater than or equal to 0. 
+//If it is, the code calls the box_apeak_xy() function with the arguments j, an[j], j, 7-j, an[j], 7-j, 0, 1. 
+//The code then calls the box_apeak_xy() function again with the arguments j, an[j]+1, j, 7-j, an[j]+1, 7-j, 0, 0. 
+//After the for loop has finished iterating, the code sets the value of j to 0. 
+//The code then sets the value of an[j] to 3-j. The value of an[0] is set to 2. 
+//The code then calls the delay() function with the argument a. 
+//The code then decrements the value of i by 1 and the while loop repeats.
 
-         i=3;
-
+	i=3;
          for (j=0;j<4;j++)
-
          an[j]=3-j;
-
          an[0]=2;
-
          while(i--)
-
          {
-
                    for (j=0;j<3;j++)
-
                    {
-
                             if (an[j]>=0)
-
                                      box_apeak_xy(j,an[j],j,7-j,an[j],7-j,0,1);
-
                             if (an[j]>=0)
-
                                      box_apeak_xy(j,an[j]+1,j,7-j,an[j]+1,7-j,0,0);
-
                    }
-
                    for (j=0;j<4;j++)
-
                    {
-
                             if (j<5-i)
-
                             an[j]--;
-
                    }
-
                    delay(a);
-
          }
 
-         //8
-
-         i=10;
-
+//8
+// It defines a for loop that iterates four times. 
+//Within the for loop, the code defines a variable named "an" as an array of four elements. 
+//The code then defines a while loop that iterates ten times. 
+//Within the while loop, the code defines a nested for loop that iterates four times. 
+//The nested for loop contains code that draws a box on the screen. 
+//The code then increments the value of the "an" array by one. 
+//The code then delays for a period of time before repeating the while loop.
+//
+//there is a for loop that sets the value of j to 0. 
+//J is less than 4, so the loop will continue until the value of j is 4. 
+//The value of i is 10. The loop will continue until the value of i is 0. 
+//The value of an is set to j-2. 
+//If the value of an is greater than or equal to 0, the box will be displayed. 
+//If the value of an is greater than or equal to 0, the box will be displayed in the next line. 
+//The value of an is incremented by 1. If the value of an is less than 7, the loop will continue. 
+//The value of an is incremented by 1. The delay is set to a.
+	
+	
+	i=10;
          for (j=0;j<4;j++)
-
                    an[j]=j-2;
-
          while(i--)
-
          {
-
                    for (j=0;j<4;j++)
-
                    {
-
                             if (an[j]>=0)
-
                             box_apeak_xy(j,an[j],j,7-j,an[j],7-j,0,1);
-
                             if (an[j]>=0)
-
                             box_apeak_xy(j,an[j]-1,j,7-j,an[j]-1,7-j,0,0);
-
                    }
-
                    for (j=0;j<4;j++)
-
                    {
-
                             if (an[j]<7)
-
                             an[j]++;
-
                    }
-
                    delay(a);
-
          }
+ }
+/////////////////////////////////////////////////////////////////////////
+//The function flash_6() uses a for loop to roll the apeks on the y and z axes. 
+//It also uses a for loop to flash the apeks on the x axis.
+//This function is part of a larger program that flashes an LED in a certain pattern. 
+//This particular function makes the LED appear to roll up a peak. 
+//First, the roll_apeak_yz function is called three times. 
+//This function turns the LED on and off to create the illusion of movement. 
+//Next, the for loop is executed three times. 
+//This loop goes through each row of the LED and turns on the appropriate pixels to create the peak. 
+//Finally, the trans function is called to create a delay between each peak.
 
-}
 
 void flash_6()
-
 {
-
       uchar i,j,k,z;
-
       roll_apeak_yz(1,10000);
-
       roll_apeak_yz(2,10000);
-
       roll_apeak_yz(3,10000);
-
       roll_apeak_yz(0,10000);
-
       roll_apeak_yz(1,10000);
-
       roll_apeak_yz(2,10000);
-
       roll_apeak_yz(3,10000);
-
       for (i=0;i<3;i++)
-
                {
-
                          for (j=0;j<8;j++)
-
                          {
-
                                   for (k=0;k<8;k++)
-
                                   {
-
                                            if ((table_3p[i][j]>>k)&1)
-
                                            {
-
                                                      for (z=1;z<8;z++)
-
                                                               {
-
                                                                        point (j,7-k,z,1);
-
                                                                        if (z-1)
-
                                                                        point (j,7-k,z-1,0);
-
                                                                        delay(5000);
-
                                                               }
-
                                            }
-
                                   }
-
                          }
-
                          trans(7,15000);
-
                }
-
 }
+
+
+//////////////////////////////////
+//The function flash_7 is a series of commands that cause a series of actions to happen in sequence. These actions are:
+//1. The roll_apeak_yz function is called four times, once for each of the four possible values of i (0, 1, 2, and 3). 
+//This function causes a "peak" to appear in the middle of the display, moving from left to right.
+//2. The roll_apeak_xy function is called four times, once for each of the four possible values of i (0, 1, 2, and 3). 
+//This function causes a "peak" to appear in the middle of the display, moving from top to bottom.
+//3. A for loop is executed, causing the box_apeak_xy function to be called eight times. 
+//This function draws a box on the display, with the top left corner at coordinates (0,0), the bottom right corner at coordinates (7,7), 
+//and with the box moving from left to right.
+//4. A delay of 30,000 milliseconds (30 seconds) is executed.
+//5. The roll_3_xy function is called four times, once for each of the four possible values of i (0, 1, 2, and 3). 
+//This function causes the display to "roll" from left to right, with each column of pixels moving one pixel to the right.
+//6. A delay of 30,000 milliseconds (30 seconds) is executed.
+//7. A for loop is executed, causing the box_apeak_xy function to be called eight times. 
+//This function draws a box on the display, with the top left corner at coordinates (7,0), the bottom right corner at coordinates (0,7), 
+//and with the box moving from right to left.
+
 
 void flash_7()
-
 {
-
       uchar i;
-
       uint a=3000;
-
       roll_apeak_yz(0,10000);
-
       roll_apeak_yz(1,10000);
-
       roll_apeak_yz(2,10000);
-
       roll_apeak_yz(3,10000);
-
       roll_apeak_yz(0,10000);
-
       roll_apeak_yz(1,10000);
-
       roll_apeak_yz(2,10000);
-
       roll_apeak_yz(3,10000);
-
       roll_apeak_yz(0,10000);
-
       roll_apeak_yz(1,10000);
-
       roll_apeak_yz(2,10000);
-
       roll_apeak_xy(0,10000);
-
       roll_apeak_xy(1,10000);
-
       roll_apeak_xy(2,10000);
-
       roll_apeak_xy(3,10000);
-
       roll_apeak_xy(0,10000);
-
       roll_apeak_xy(1,10000);
-
       roll_apeak_xy(2,10000);
-
       roll_apeak_xy(3,10000);
-
       for (i=0;i<8;i++)
-
       {
-
                box_apeak_xy (0,i,0,7-i,i,7,1,1);
-
                delay(a);
-
       }
-
       delay(30000);
-
       roll_3_xy(0,a);
-
       delay(30000);
-
       roll_3_xy(1,a);
-
       delay(30000);
-
       roll_3_xy(2,a);
-
       delay(30000);
-
       roll_3_xy(3,a);
-
       delay(30000);
-
       roll_3_xy(0,a);
-
       delay(30000);
-
       roll_3_xy(1,a);
-
       delay(30000);
-
       roll_3_xy(2,a);
-
       delay(30000);
-
       roll_3_xy(3,a);
-
       for (i=7;i>0;i--)
-
       {
-
                box_apeak_xy(i,0,0,i,7,7,1,0);
-
                delay(a);
-
       }
-
 }
 
+xxx
+////////////////////////////////////////////////////////////
 void flash_8()
 
 {
