@@ -633,7 +633,19 @@ void box(uchar x1,uchar y1,uchar z1,uchar x2,uchar y2,uchar z2,uchar fill,uchar 
 }
 
 
-//xxx
+//The first line creates a variable called "i" of type unsigned char.
+//The second line calls the function "max" with two parameters, "z1" and "z2".
+//The third line checks if the value of the variable "fill" is true. 
+//If it is, the code executes the for loop on the fourth line. 
+//This loop will continue executing until the value of "i" is greater than "z2". will run from the value of 'z1' up to and including the value of 'z2'. 
+//Each time the loop runs, the 'line' function will be called with the coordinates of the two points and the value of 'i'.
+//Inside the for loop, the fifth line calls the function "line" with seven parameters. 
+//The first four parameters are the coordinates of the start and end points of the line. 
+//The fifth and sixth parameters are the values of "i" and "le" respectively. The seventh parameter is the value of "z2".
+//If the value of "fill" is not true, the code will execute the 'line' function four times,  on the sixth and seventh lines will execute.  once for each side of the cube. 
+//These lines call the "line" function with the same parameters as before, except that the seventh parameter is the value of "z1" instead of "z2".
+
+
 void box_apeak_xy(uchar x1,uchar y1,uchar z1,uchar x2,uchar y2,uchar z2,uchar fill,uchar le)
 
 {
@@ -671,6 +683,9 @@ void box_apeak_xy(uchar x1,uchar y1,uchar z1,uchar x2,uchar y2,uchar z2,uchar fi
          }
 
 }
+//The poke function takes in three parameters - n, x and y. n is a number between 0 and 255, x and y are coordinates between 0 and 7.
+//The function loops through the 8 bits of n, and sets the pixel at (x,y,i) to the value of the i-th bit of n.
+
 
 void poke(uchar n,uchar x,uchar y)
 
@@ -687,6 +702,13 @@ void poke(uchar n,uchar x,uchar y)
          }
 
 }
+
+
+
+//The function boxtola takes two arguments, i and n, and does not return a value.
+//If the value of i is between 0 and 7, the code sets the value of the byte at memory address n to 7-i.
+//If the value of i is between 8 and 16, the code sets the value of the byte at memory address n to i-8.
+//If the value of i is between 16 and 24, the code sets the value of the byte at memory address n to i-16.
 
 void boxtola(char i,uchar n)
 
@@ -719,6 +741,8 @@ void boxtola(char i,uchar n)
  
 
 }
+
+// xxx
 
 void rolldisplay(uint speed)
 
