@@ -17,7 +17,7 @@ The latches need to be enabled at right time to pickup the data, then we transfe
 out(c),reg
 ```
 
-We load a then bc, then execute out(c), it will output 24 bits, 8 on data and 16 on address at the same time, code looks like this;
+We load the a reg then the bc reg, then execute out(c), it will simultaneously output 24 bits, 8 on data and 16 on address at the same time, the code looks like this;
 ```
 ld a,n        ; load a
 out (c),bc    ; load bc and execute, now a+bc goes out, for latch to pickup if enabled
