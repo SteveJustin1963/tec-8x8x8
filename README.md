@@ -11,7 +11,7 @@ Id like to try the undocumented out(c) command feature of the z80 to drive the 3
 In other projects this could be xy coils and luminance in a crt tube, or xy stepper motor + laser, or xyz robot arm, or telescope control, ...
 
 So using out() opcode like this allows writing to the BOTH data and address at the same time! 
-The latches need to be anabled at right time to pickup the data, then we transfer this to the 8x8x8 kit. 
+The latches need to be enabled at right time to pickup the data, then we transfer this to the 8x8x8 kit. 
 
 ```
 out(c),reg
@@ -28,7 +28,7 @@ See the circuit of the kit
 
 https://github.com/SteveJustin1963/tec-8x8x8/blob/master/pics/8x8x8-LED-Cube-Image-Circuit-Diagram-Full-Size.png
 
-Experimental cicuit to connect the tec1- to 8x8x8 kit
+Experimental circuit to connect the tec1- to 8x8x8 kit
 
 ![](https://github.com/SteveJustin1963/tec-8x8x8/blob/master/pics/wiring-1.png)
 
@@ -92,8 +92,9 @@ Package list:
 make more led effects
 - read photoresistor via schmitt or ADC and input into the mixing table, use hand to control light 
 - induce feedback loops, chaos cct etc
-- superposition code behaviour thru mixing matrix
+- superposition code behavior thru mixing matrix
 - 3d tetris
 - use 5 https://github.com/SteveJustin1963/tec-EYE set into a cube, then feed this into the outer 5 layers of the 8x8x8 cube, etc
+
 
 
