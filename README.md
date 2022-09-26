@@ -7,7 +7,7 @@
 
 Ater the 8x8 comes 8x8x8 by adding more latches. rather than round up all the parts its cheaper to buy a 8x8x8 kit for under $30, https://www.banggood.com/Geekcreit-8x8x8-LED-Cube-3D-Light-Square-Blue-LED-Flash-Electronic-DIY-Kit-p-1055438.html and we replace their microcontroller with our tec-1 as controller. the kits uses  buffers so all we do is hook into each of the 8 data paths. their schematic https://github.com/SteveJustin1963/tec-8x8x8/blob/master/SKU331661/Schematic/Schematic.pdf
 uses 8052 microcontroller, with three sets of 8 bit ports, p00-p07 goes to each of the eight 573 latches. the enable oc is pull down for always enabled.
-then p20 to p27 drive each of latches clock lines. this switches on each layer one at a time. last, p10 to p17 finish the anode side of each layer, via a 2803 drive and 220 ohm current limiters.
+then p20 to p27 drive each of latches clock lines. this switches on each layer one at a time. last, p10 to p17 finish the cathode side of each layer, via a LN2803 with eight darlingtons sinking current thru 220 ohms.
 
 
 
