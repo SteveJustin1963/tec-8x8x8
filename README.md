@@ -1,7 +1,6 @@
 ## tec-8x8x8
 
 ![](https://github.com/SteveJustin1963/tec-8x8x8/blob/master/pics/64-to-512.png)
-
 ![image](https://user-images.githubusercontent.com/58069246/192197176-98d637e0-66cb-463e-8f43-c5abc83ef2e8.png)
 
 
