@@ -24,9 +24,8 @@ out (c),bc    ; load bc and execute, now a+bc goes out, for latch to pickup if e
 ```
 
 
-See the circuit of the kit
 
-https://github.com/SteveJustin1963/tec-8x8x8/blob/master/pics/8x8x8-LED-Cube-Image-Circuit-Diagram-Full-Size.png
+### ver 1
 
 Experimental circuit to connect the tec1- to 8x8x8 kit
 
@@ -35,16 +34,22 @@ Experimental circuit to connect the tec1- to 8x8x8 kit
 ![](https://github.com/SteveJustin1963/tec-8x8x8/blob/master/pics/schem-1.png)
 
 
-### ver 1
+
 https://easyeda.com/editor#id=2566f0087f05462c8c1e0b6c8555f6c8|e49368fb5fbd4fbda2a12e08e32c8036
 
 ![](https://github.com/SteveJustin1963/tec-8x8x8/blob/master/pics/pcb.png)
+ 
 
-# Warning
-not tested nor do i have code yet
-i have the 8x8x8 kit so building that first
 
-## 8x8x8 Kit info
+
+
+
+
+
+### 8x8x8 Kit info
+
+https://github.com/SteveJustin1963/tec-8x8x8/blob/master/pics/8x8x8-LED-Cube-Image-Circuit-Diagram-Full-Size.png
+
 
 Notes from the kit website...
 
