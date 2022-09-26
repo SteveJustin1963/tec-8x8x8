@@ -5,7 +5,9 @@
 
 
 
-after the 8x8 comes the 8x8x8 by adding more latches. rather than round up all the parts its cheaper to buy a 8x8x8 kit for under $30, and we replace their microcontroller with our tec-1 as a c controller. 
+after the 8x8 comes the 8x8x8 by adding more latches. rather than round up all the parts its cheaper to buy a 8x8x8 kit for under $30, and we replace their microcontroller with our tec-1 as controller. the kits has buffers so allwe mainlyhave to do is to hook into each of the 8 data paths.  
+have a look at their schematic https://github.com/SteveJustin1963/tec-8x8x8/blob/master/SKU331661/Schematic/Schematic.pdf
+
 
 
 
