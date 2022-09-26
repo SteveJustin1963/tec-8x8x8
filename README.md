@@ -5,40 +5,9 @@
 
 
 
-after the 8x8 comes the 8x8x8 by adding more latches. rather than round up all the parts its cheaper to buy a 8x8x8 kit for under $30, and we replace their microcontroller with our tec-1 as controller. the kits has buffers so allwe mainlyhave to do is to hook into each of the 8 data paths.  
-have a look at their schematic https://github.com/SteveJustin1963/tec-8x8x8/blob/master/SKU331661/Schematic/Schematic.pdf
-we se.. they use a 8052 microcontroller, with three sets of 8 bit ports, poo-p07 goes to each of the eight 573 latches. the enable oc is pull down for always enabled.
-then p20 to p27 drive each of latches clock line. this switches on the layer. one at a time
-last, p10 to p17 finish the anode side of each layer, via a 2803 drive with 220 ohm current limit.
-
-
-
-
-
-
-### 8x8x8 Kit info
-https://www.banggood.com/Geekcreit-8x8x8-LED-Cube-3D-Light-Square-Blue-LED-Flash-Electronic-DIY-Kit-p-1055438.html
-
-
-some Dynamic 3D effect you can expect from their code:
-1. Pyramid
-2. Rain graphic effect
-3. Leaping graphics effect
-4. Rotating graphic effect
-5. Square move effect
-6. Square light move effect
-7. Lamp standard rollover effect
-8. Square magnify and shrink effect
-9. Reverse lamp
-10. Triangle three-dimensional graphics rotation effect
-11. Article lamp running effect
-12. Pull screen graphics effect
-13. Fast and slow display
-
-
-
-
-
+Ater the 8x8 comes 8x8x8 by adding more latches. rather than round up all the parts its cheaper to buy a 8x8x8 kit for under $30, https://www.banggood.com/Geekcreit-8x8x8-LED-Cube-3D-Light-Square-Blue-LED-Flash-Electronic-DIY-Kit-p-1055438.html and we replace their microcontroller with our tec-1 as controller. the kits uses  buffers so all we do is hook into each of the 8 data paths. their schematic https://github.com/SteveJustin1963/tec-8x8x8/blob/master/SKU331661/Schematic/Schematic.pdf
+uses 8052 microcontroller, with three sets of 8 bit ports, p00-p07 goes to each of the eight 573 latches. the enable oc is pull down for always enabled.
+then p20 to p27 drive each of latches clock lines. this switches on each layer one at a time. last, p10 to p17 finish the anode side of each layer, via a 2803 drive and 220 ohm current limiters.
 
 
 
