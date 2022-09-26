@@ -7,6 +7,9 @@
 
 after the 8x8 comes the 8x8x8 by adding more latches. rather than round up all the parts its cheaper to buy a 8x8x8 kit for under $30, and we replace their microcontroller with our tec-1 as controller. the kits has buffers so allwe mainlyhave to do is to hook into each of the 8 data paths.  
 have a look at their schematic https://github.com/SteveJustin1963/tec-8x8x8/blob/master/SKU331661/Schematic/Schematic.pdf
+we se.. they use a 8052 microcontroller, with three sets of 8 bit ports, poo-p07 goes to each of the eight 573 latches. the enable oc is pull down for always enabled.
+then p20 to p27 drive each of latches clock line. this switches on the layer. one at a time
+last, p10 to p17 finish the anode side of each layer, via a 2803 drive with 220 ohm current limit.
 
 
 
