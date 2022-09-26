@@ -7,9 +7,38 @@
 
 after the 8x8 comes the 8x8x8 by adding more latches. rather than round up all the parts its cheaper to buy a 8x8x8 kit for under $30, and we replace their microcontroller with our tec-1 as a c controller. 
 
-kits example... https://www.banggood.com/Geekcreit-8x8x8-LED-Cube-3D-Light-Square-Blue-LED-Flash-Electronic-DIY-Kit-p-1055438.html
 
-code...i want to use the know but undocumented z80 `out(c)` command to drive the 3 x 8bit dimensions of the cube,
+
+
+
+### 8x8x8 Kit info
+https://www.banggood.com/Geekcreit-8x8x8-LED-Cube-3D-Light-Square-Blue-LED-Flash-Electronic-DIY-Kit-p-1055438.html
+
+
+some Dynamic 3D effect you can expect from their code:
+1. Pyramid
+2. Rain graphic effect
+3. Leaping graphics effect
+4. Rotating graphic effect
+5. Square move effect
+6. Square light move effect
+7. Lamp standard rollover effect
+8. Square magnify and shrink effect
+9. Reverse lamp
+10. Triangle three-dimensional graphics rotation effect
+11. Article lamp running effect
+12. Pull screen graphics effect
+13. Fast and slow display
+
+
+
+
+
+
+
+
+### code
+i want to use the know but undocumented z80 `out(c)` command to drive the 3 x 8bit dimensions of the cube,
 
 
 So using out() opcode like this allows writing to the BOTH data and address at the same time! 
@@ -52,31 +81,6 @@ https://easyeda.com/editor#id=2566f0087f05462c8c1e0b6c8555f6c8|e49368fb5fbd4fbda
 
 
 
-### 8x8x8 Kit info
-
-https://github.com/SteveJustin1963/tec-8x8x8/blob/master/pics/8x8x8-LED-Cube-Image-Circuit-Diagram-Full-Size.png
-
-Instruction: Click to open (Instruction is for reference only, will have some changes with the actual product, such as change SMD to DIP.)
-Note: This is a DIY kit, you need to have some knowledge of electronics and ability.
-Needs a lot of soldering, you should have enough patience.
-S2, S3 is the reserved position, there is no actual use, the package is not included.
-
-Features:
-
-You can use it to achieve the Dynamic 3D effect:
-1. Pyramid
-2. Rain graphic effect
-3. Leaping graphics effect
-4. Rotating graphic effect
-5. Square move effect
-6. Square light move effect
-7. Lamp standard rollover effect
-8. Square magnify and shrink effect
-9. Reverse lamp
-10. Triangle three-dimensional graphics rotation effect
-11. Article lamp running effect
-12. Pull screen graphics effect
-13. Fast and slow display
 
 
  
