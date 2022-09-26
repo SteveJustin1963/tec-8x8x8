@@ -2,13 +2,12 @@
 
 ![](https://github.com/SteveJustin1963/tec-8x8x8/blob/master/pics/64-to-512.png)
 
-Its nice we have the 8x8 addon, and on much the same design we can make a 8x8x8 by adding more latches + 138 chip. 
-you can also buy a 8x8x8 kit for under $30 with all the parts. Lets try and drive it from the tec-1.
+after the 8x8 comes the 8x8x8 by adding more latches. rather than round up all the parts its cheaper to buy a 8x8x8 kit for under $30, and we replace their microcontroller with our tec-1 as a c controller. 
 
-Examples of the kits for sale online see https://www.banggood.com/Geekcreit-8x8x8-LED-Cube-3D-Light-Square-Blue-LED-Flash-Electronic-DIY-Kit-p-1055438.html
+kits example... https://www.banggood.com/Geekcreit-8x8x8-LED-Cube-3D-Light-Square-Blue-LED-Flash-Electronic-DIY-Kit-p-1055438.html
 
-Id like to try the undocumented out(c) command feature of the z80 to drive the 3 dimensions of the cube, or anthing like this eg x + y + z.
-In other projects this could be xy coils and luminance in a crt tube, or xy stepper motor + laser, or xyz robot arm, or telescope control, ...
+code...i want to use the know but undocumented z80 `out(c)` command to drive the 3 x 8bit dimensions of the cube,
+
 
 So using out() opcode like this allows writing to the BOTH data and address at the same time! 
 The latches need to be enabled at right time to pickup the data, then we transfer this to the 8x8x8 kit. 
@@ -100,6 +99,11 @@ make more led effects
 - superposition code behavior thru mixing matrix
 - 3d tetris
 - use 5 https://github.com/SteveJustin1963/tec-EYE set into a cube, then feed this into the outer 5 layers of the 8x8x8 cube, etc
+- or anthing like this eg x + y + z. 
+- In other projects this could be xy coils and luminance in a crt tube, or xy stepper motor + laser, or xyz robot arm, or telescope control, ...
+
+
+
 
  ## Ref
 
