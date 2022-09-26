@@ -56,9 +56,6 @@ https://easyeda.com/editor#id=2566f0087f05462c8c1e0b6c8555f6c8|e49368fb5fbd4fbda
 
 https://github.com/SteveJustin1963/tec-8x8x8/blob/master/pics/8x8x8-LED-Cube-Image-Circuit-Diagram-Full-Size.png
 
-
-Notes from the kit website...
-
 Instruction: Click to open (Instruction is for reference only, will have some changes with the actual product, such as change SMD to DIP.)
 Note: This is a DIY kit, you need to have some knowledge of electronics and ability.
 Needs a lot of soldering, you should have enough patience.
@@ -81,14 +78,7 @@ You can use it to achieve the Dynamic 3D effect:
 12. Pull screen graphics effect
 13. Fast and slow display
 
-Specification:
-
-Light Color: Blue
-PCB Size: 11.1 x 12.7cm
-Power Supply Voltage: 4.5~5.5V
-Net weight: About 240g
-
-Package list:
+ 
 
 ![](https://github.com/SteveJustin1963/tec-8x8x8/blob/master/pics/C89439F9BE3E6986B18FDAB69E885086.jpg.webp)
 
