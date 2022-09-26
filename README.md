@@ -15,7 +15,7 @@ then p20 to p27 drive each of the latch's clock lines. this switches on each lay
 i want to use the know but undocumented z80 `out(c)` command to drive the 3 x 8bit dimensions of the cube,
 
 
-So using out() opcode like this allows writing to the BOTH data and address at the same time! 
+So using out() opcode like this allows writing DATA to the BOTH data and address at the same time! 
 The latches need to be enabled at the right time to pick up the data, then we transfer this to the 8x8x8 kit. 
 
 ```
