@@ -86,8 +86,7 @@ https://easyeda.com/editor#id=2566f0087f05462c8c1e0b6c8555f6c8|e49368fb5fbd4fbda
  
 
 ## Iterate
-
-make more led effects
+- more led effects
 - read photoresistor via schmitt or ADC and input into the mixing table, use hand to control light 
 - induce feedback loops, chaos cct etc
 - superposition code behavior thru mixing matrix
@@ -99,7 +98,7 @@ make more led effects
 
 
 
- ## Ref
+ ### Ref
 
 - https://www.instructables.com/Led-Cube-8x8x8/
 - https://www.keil.com/dd/docs/c51/reg52.h
