@@ -78,9 +78,6 @@ You can use it to achieve the Dynamic 3D effect:
 12. Pull screen graphics effect
 13. Fast and slow display
 
- 
-
-![](https://github.com/SteveJustin1963/tec-8x8x8/blob/master/pics/C89439F9BE3E6986B18FDAB69E885086.jpg.webp)
 
  
 
