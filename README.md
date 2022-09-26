@@ -2,6 +2,10 @@
 
 ![](https://github.com/SteveJustin1963/tec-8x8x8/blob/master/pics/64-to-512.png)
 
+![image](https://user-images.githubusercontent.com/58069246/192197176-98d637e0-66cb-463e-8f43-c5abc83ef2e8.png)
+
+
+
 after the 8x8 comes the 8x8x8 by adding more latches. rather than round up all the parts its cheaper to buy a 8x8x8 kit for under $30, and we replace their microcontroller with our tec-1 as a c controller. 
 
 kits example... https://www.banggood.com/Geekcreit-8x8x8-LED-Cube-3D-Light-Square-Blue-LED-Flash-Electronic-DIY-Kit-p-1055438.html
