@@ -24,8 +24,13 @@ out(c),reg
 We load the a reg then the bc reg, then execute out(c), it will simultaneously output 24 bits, 8 on data and 16 on address at the same time, the code looks like this;
 ```
 ld a,n        ; load a
-out (c),bc    ; load bc and execute, now a+bc goes out, for latch to pickup if enabled
+out (c),bc    ; load bc and execute, now a+bc goes out, for latch to pickup if enabled (how?).
+
 ```
+stuff that. add onther 273 latch a stobe off Y3 (port3 etc) off the 138 on tec1. better. 
+
+
+
 
 
 ### cct ideas
