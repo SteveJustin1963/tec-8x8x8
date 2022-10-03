@@ -7,11 +7,12 @@ After the 8x8 comes 8x8x8 by adding more latches. rather than round up all the p
 uses an 8052 microcontroller, with three sets of 8 bit ports, p00-p07 goes to each of the eight 573 latches. The enable oc is pull down for always enabled.
 then p20 to p27 drive each of the latch's clock lines. this switches on each layer one at a time. last, p10 to p17 finish the cathode side of each layer, via a LN2803 with eight darlingtons sinking current thru 220 ohms.  the 74573 pin 1 /oe aka /oc are all low = on, then the data is clocked pin 11 from controller port p20-27.
 
-
+![image](https://user-images.githubusercontent.com/58069246/193499278-2d37c93b-46a5-4451-88d4-2cc323aaa395.png)
+![image](https://user-images.githubusercontent.com/58069246/193499237-778af94a-1878-4c2e-9840-2c60b31d8919.png)
 ![image](https://user-images.githubusercontent.com/58069246/193499044-3a7a1f15-19d4-4840-9161-3d60a4750e75.png)
 ![image](https://user-images.githubusercontent.com/58069246/193499163-0824486f-7264-4b04-9bf4-73e1a209d771.png)
-![image](https://user-images.githubusercontent.com/58069246/193499237-778af94a-1878-4c2e-9840-2c60b31d8919.png)
-![image](https://user-images.githubusercontent.com/58069246/193499278-2d37c93b-46a5-4451-88d4-2cc323aaa395.png)
+
+
 
  
 
