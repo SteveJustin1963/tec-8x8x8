@@ -7,8 +7,8 @@ After the 8x8 comes 8x8x8 by adding more latches. rather than round up all the p
 
 ![image](https://user-images.githubusercontent.com/58069246/193499278-2d37c93b-46a5-4451-88d4-2cc323aaa395.png)
 ![image](https://user-images.githubusercontent.com/58069246/193499237-778af94a-1878-4c2e-9840-2c60b31d8919.png)
-![image](https://user-images.githubusercontent.com/58069246/193499044-3a7a1f15-19d4-4840-9161-3d60a4750e75.png)
 ![image](https://user-images.githubusercontent.com/58069246/193499163-0824486f-7264-4b04-9bf4-73e1a209d771.png)
+![image](https://user-images.githubusercontent.com/58069246/193499044-3a7a1f15-19d4-4840-9161-3d60a4750e75.png)
 ![image](https://user-images.githubusercontent.com/58069246/193485615-3e63ddc4-8e09-491d-a5ea-04f4ed1a5869.png)
 
 their schematic https://github.com/SteveJustin1963/tec-8x8x8/blob/master/SKU331661/Schematic/Schematic.pdf
