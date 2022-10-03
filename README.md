@@ -24,13 +24,7 @@ ld a,n        ; load a
 out (c),bc    ; load bc and execute, now a+bc goes out, for latch to pickup if enabled
 ```
 
-### ver 2
-16.9.22
-rewire 40 pins from tec-1 side to a 40 pin idc on 888 side
-
-
-
-### ver 1
+### cct ideas
 
 Experimental circuit to connect the tec1- to 8x8x8 kit
 
