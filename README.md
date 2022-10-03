@@ -12,9 +12,12 @@ then p20 to p27 drive each of the latch's clock lines. this switches on each lay
 ![image](https://user-images.githubusercontent.com/58069246/193485615-3e63ddc4-8e09-491d-a5ea-04f4ed1a5869.png)
 
 
+### ver2 
+stuff that. add onther 273 latch a stobe off Y3 (port3 etc) off the 138 on tec1. better. 
 
 
-### code
+
+### ver1
 so maybe we can intercept the 3x 8bit busses... p10-17, p00-07 and p20-27 with the undocumented z80 `out(c)` command to drive the 3x busses thus the 3 cube dimensions, the out() opcode used like this allows writing DATA to the both data and address at the same time. but how to control latch enables ? 
 
 ```
@@ -27,36 +30,15 @@ ld a,n        ; load a
 out (c),bc    ; load bc and execute, now a+bc goes out, for latch to pickup if enabled (how?).
 
 ```
-stuff that. add onther 273 latch a stobe off Y3 (port3 etc) off the 138 on tec1. better. 
-
-
-
-
-
-### cct ideas
-
-Experimental circuit to connect the tec1- to 8x8x8 kit
 
 ![](https://github.com/SteveJustin1963/tec-8x8x8/blob/master/pics/wiring-1.png)
 
 ![](https://github.com/SteveJustin1963/tec-8x8x8/blob/master/pics/schem-1.png)
 
-
-
 https://easyeda.com/editor#id=2566f0087f05462c8c1e0b6c8555f6c8|e49368fb5fbd4fbda2a12e08e32c8036
 
- 
- 
+wont work
 
-
-
-
-
-
-
-
-
- 
 
 ## Iterate
 - more led effects
