@@ -15,7 +15,7 @@ then p20 to p27 drive each of the latch's clock lines. this switches on each lay
 
 
 ### code
-I wish to use the know but undocumented z80 `out(c)` command to drive the 3 x 8bit dimensions of the cube, So using out() opcode like this allows writing DATA to the both data and address at the same time. 
+so maybe we can intercept the 3x 8bit busses... p10-17, p00-07 and p20-27 with the undocumented z80 `out(c)` command to drive the 3x busses thus the 3 cube dimensions, the out() opcode used like this allows writing DATA to the both data and address at the same time. we needto control latch enables somehow 
 
 ```
 out(c),reg
@@ -27,7 +27,6 @@ ld a,n        ; load a
 out (c),bc    ; load bc and execute, now a+bc goes out, for latch to pickup if enabled
 ```
 
-but, the problem placing the latches on the A and D bus will mean as the tec1 is running code,  all the led will start flashing. we need to select the array only when we need it. .. so how to do this?
 
 ### cct ideas
 
