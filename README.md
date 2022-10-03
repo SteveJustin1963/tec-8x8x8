@@ -25,7 +25,7 @@ out (c),bc    ; load bc and execute, now a+bc goes out, for latch to pickup if e
 ```
 
 ### ver 2
-36.9.22
+16.9.22
 rewire 40 pins from tec-1 side to a 40 pin idc on 888 side
 
 
