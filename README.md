@@ -1,6 +1,6 @@
 ## tec-8x8x8
 ![image](https://user-images.githubusercontent.com/58069246/193498963-cf5ad5fe-289f-4f17-93af-3003e1cf7d9b.png)
-![image](https://user-images.githubusercontent.com/58069246/192197176-98d637e0-66cb-463e-8f43-c5abc83ef2e8.png)
+![image](https://user-images.githubusercontent.com/58069246/193499044-3a7a1f15-19d4-4840-9161-3d60a4750e75.png)
 
 
 
