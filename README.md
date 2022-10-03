@@ -15,7 +15,7 @@ then p20 to p27 drive each of the latch's clock lines. this switches on each lay
 
 
 ### code
-so maybe we can intercept the 3x 8bit busses... p10-17, p00-07 and p20-27 with the undocumented z80 `out(c)` command to drive the 3x busses thus the 3 cube dimensions, the out() opcode used like this allows writing DATA to the both data and address at the same time. we needto control latch enables somehow 
+so maybe we can intercept the 3x 8bit busses... p10-17, p00-07 and p20-27 with the undocumented z80 `out(c)` command to drive the 3x busses thus the 3 cube dimensions, the out() opcode used like this allows writing DATA to the both data and address at the same time. but how to control latch enables ? 
 
 ```
 out(c),reg
