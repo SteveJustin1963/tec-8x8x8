@@ -24,6 +24,8 @@ ld a,n        ; load a
 out (c),bc    ; load bc and execute, now a+bc goes out, for latch to pickup if enabled
 ```
 
+but, the problem placing the latches on the A and D bus will mean as the tec1 is running code,  all the led will start flashing. we need to select the array only when we need it. .. so how to do this?
+
 ### cct ideas
 
 Experimental circuit to connect the tec1- to 8x8x8 kit
