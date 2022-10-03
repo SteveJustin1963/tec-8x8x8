@@ -17,12 +17,12 @@ then p20 to p27 drive each of the latch's clock lines. this switches on each lay
 
 
 ### ver2 
-stuff that. add onther 273 latch a stobe off Y3 (port3 etc) off the 138 on tec1. better. 
+stuff that. add another 273 latch and strobe off port3 - Y3 etc from the 138 on tec1. better. 
 
 
 
 ### ver1
-so maybe we can intercept the 3x 8bit busses... p10-17, p00-07 and p20-27 with the undocumented z80 `out(c)` command to drive the 3x busses thus the 3 cube dimensions, the out() opcode used like this allows writing DATA to the both data and address at the same time. but how to control latch enables ? 
+so maybe we can intercept the 3x 8 bit busses... p10-17, p00-07 and p20-27 with the undocumented z80 `out(c)` command to drive the 3x busses thus the 3 cube dimensions, the out() opcode used like this allows writing DATA to the both data and address at the same time. but how to control latch enables ? 
 
 ```
 out(c),reg
@@ -60,6 +60,7 @@ wont work
 - https://www.instructables.com/Led-Cube-8x8x8/
 - https://www.keil.com/dd/docs/c51/reg52.h
 - https://www.keil.com/support/man/docs/c51/c51_intrins_h.htm
+
 
 
 
