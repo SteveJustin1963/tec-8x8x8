@@ -17,7 +17,9 @@ then p20 to p27 drive each of the latch's clock lines. this switches on each lay
 
 
 ### ver2 
-stuff that. add another 273 latch and strobe off port3 - Y3 etc from the 138 on tec1. better. 
+we can borrow 16 bits off the 2 latches on the tec1 to drive each kath-anode matrix and add another 273 latch and strobe off port3 to activate each matrix layer.
+
+https://easyeda.com/editor#id=d92d445978864fd6a0b9c903333f8f80|1cce039453314ed0890fe77e2147df22
 
 
 
