@@ -3,20 +3,17 @@
 
 
 
-After the 8x8 comes 8x8x8 by adding more latches. rather than round up all the parts its cheaper to buy a 8x8x8 kit for under $30, https://www.banggood.com/Geekcreit-8x8x8-LED-Cube-3D-Light-Square-Blue-LED-Flash-Electronic-DIY-Kit-p-1055438.html and we replace their microcontroller with our tec-1 as controller. The kits use  buffers so all we do is hook into each of the 8 data paths. their schematic https://github.com/SteveJustin1963/tec-8x8x8/blob/master/SKU331661/Schematic/Schematic.pdf
-uses an 8052 microcontroller, with three sets of 8 bit ports, p00-p07 goes to each of the eight 573 latches. The enable oc is pull down for always enabled.
-then p20 to p27 drive each of the latch's clock lines. this switches on each layer one at a time. last, p10 to p17 finish the cathode side of each layer, via a LN2803 with eight darlingtons sinking current thru 220 ohms.  the 74573 pin 1 /oe aka /oc are all low = on, then the data is clocked pin 11 from controller port p20-27.
+After the 8x8 comes 8x8x8 by adding more latches. rather than round up all the parts its cheaper to buy a 8x8x8 kit for under $30, https://www.banggood.com/Geekcreit-8x8x8-LED-Cube-3D-Light-Square-Blue-LED-Flash-Electronic-DIY-Kit-p-1055438.html and we replace their microcontroller with our tec-1 as controller. The kits use  buffers so all we do is hook into each of the 8 data paths. 
 
 ![image](https://user-images.githubusercontent.com/58069246/193499278-2d37c93b-46a5-4451-88d4-2cc323aaa395.png)
 ![image](https://user-images.githubusercontent.com/58069246/193499237-778af94a-1878-4c2e-9840-2c60b31d8919.png)
 ![image](https://user-images.githubusercontent.com/58069246/193499044-3a7a1f15-19d4-4840-9161-3d60a4750e75.png)
 ![image](https://user-images.githubusercontent.com/58069246/193499163-0824486f-7264-4b04-9bf4-73e1a209d771.png)
-
-
-
- 
-
 ![image](https://user-images.githubusercontent.com/58069246/193485615-3e63ddc4-8e09-491d-a5ea-04f4ed1a5869.png)
+
+their schematic https://github.com/SteveJustin1963/tec-8x8x8/blob/master/SKU331661/Schematic/Schematic.pdf
+uses an 8052 microcontroller, with three sets of 8 bit ports, p00-p07 goes to each of the eight 573 latches. The enable oc is pull down for always enabled.
+then p20 to p27 drive each of the latch's clock lines. this switches on each layer one at a time. last, p10 to p17 finish the cathode side of each layer, via a LN2803 with eight darlingtons sinking current thru 220 ohms.  the 74573 pin 1 /oe aka /oc are all low = on, then the data is clocked pin 11 from controller port p20-27.
 
 
 ### ver2 
