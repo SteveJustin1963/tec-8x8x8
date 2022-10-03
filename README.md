@@ -33,8 +33,6 @@ out (c),bc    ; load bc and execute, now a+bc goes out, for latch to pickup if e
 
 ![](https://github.com/SteveJustin1963/tec-8x8x8/blob/master/pics/wiring-1.png)
 
-![](https://github.com/SteveJustin1963/tec-8x8x8/blob/master/pics/schem-1.png)
-
 https://easyeda.com/editor#id=2566f0087f05462c8c1e0b6c8555f6c8|e49368fb5fbd4fbda2a12e08e32c8036
 
 wont work
